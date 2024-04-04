@@ -91,8 +91,8 @@ namespace AllupWebApplication.Controllers
         }
 
         // Hard delete a slider (remove from database)
-        [HttpPost, ActionName("DeleteConfirm")]
-        [ValidateAntiForgeryToken]
+        [HttpGet, ActionName("HardDeleteConfirmed")]
+
         public async Task<IActionResult> HardDeleteConfirmed(int id)
         {
             await _sliderService.HardDeleteSliderAsync(id);

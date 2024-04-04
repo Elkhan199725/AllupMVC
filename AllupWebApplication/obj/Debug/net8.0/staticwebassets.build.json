@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "VEkhaVps/iYoJXAPpahyI445Sz8tnG8kvgBdrHffIKw=",
+  "Hash": "pdrst1eYkr647J/eG6wLWz/Q3LKKZsgRAeEHTQ1cA4Y=",
   "Source": "AllupWebApplication",
   "BasePath": "_content/AllupWebApplication",
   "Mode": "Default",
@@ -39269,6 +39269,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Identity": "C:\\Users\\elkhantma\\Desktop\\AllupMVC\\AllupWebApplication\\wwwroot\\uploads\\sliders\\367d2508-eb63-4df6-8da2-d7cc11b42e23_1660sRoque.jpeg",
+      "SourceId": "AllupWebApplication",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\elkhantma\\Desktop\\AllupMVC\\AllupWebApplication\\wwwroot\\",
+      "BasePath": "_content/AllupWebApplication",
+      "RelativePath": "uploads/sliders/367d2508-eb63-4df6-8da2-d7cc11b42e23_1660sRoque.jpeg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\sliders\\367d2508-eb63-4df6-8da2-d7cc11b42e23_1660sRoque.jpeg"
     }
   ]
 }

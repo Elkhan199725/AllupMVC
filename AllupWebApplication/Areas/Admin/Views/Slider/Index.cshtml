@@ -28,8 +28,9 @@
                         <img style="width:150px" src="~/uploads/sliders/@item.ImageUrl" />
                     </td>
                     <td>
-                        <a asp-action="update" asp-controller="slider" asp-route-id="@item.Id" class="btn btn-warning">Update</a>
-                        <a asp-action="delete" asp-controller="slider" asp-route-id="@item.Id" class="btn btn-danger delete-btn">Delete</a>
+                        <a asp-action="edit" asp-controller="slider" asp-route-id="@item.Id" class="btn btn-warning">Edit</a>
+                        <a asp-action="softdelete" asp-controller="slider" asp-route-id="@item.Id" class="btn btn-info delete-btn">SoftDelete</a>
+                        <a asp-action="harddeleteconfirmed" asp-controller="slider" asp-route-id="@item.Id" class="btn btn-danger delete-btn">HardDelete</a>
                     </td>
                 </tr>
             }

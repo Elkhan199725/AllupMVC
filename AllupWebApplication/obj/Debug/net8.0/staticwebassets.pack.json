@@ -8261,6 +8261,10 @@
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
     },
     {
+      "Id": "C:\\Users\\elkhantma\\Desktop\\AllupMVC\\AllupWebApplication\\wwwroot\\uploads\\sliders\\367d2508-eb63-4df6-8da2-d7cc11b42e23_1660sRoque.jpeg",
+      "PackagePath": "staticwebassets\\uploads\\sliders\\367d2508-eb63-4df6-8da2-d7cc11b42e23_1660sRoque.jpeg"
+    },
+    {
       "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.AllupWebApplication.Microsoft.AspNetCore.StaticWebAssets.props",
       "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
     },
