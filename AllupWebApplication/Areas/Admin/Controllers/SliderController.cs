@@ -1,83 +1,102 @@
-﻿using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
+using AllupWebApplication.Business.Interfaces;
+using AllupWebApplication.Models;
+using Microsoft.AspNetCore.Http;
+using System;
+using System.Threading.Tasks;
 
-namespace AllupWebApplication.Areas.Admin.Controllers
+namespace AllupWebApplication.Controllers
 {
+    [Area("Admin")]
     public class SliderController : Controller
     {
-        // GET: SliderController
-        public ActionResult Index()
+        private readonly ISliderService _sliderService;
+
+        public SliderController(ISliderService sliderService)
+        {
+            _sliderService = sliderService;
+        }
+
+        // Display the list of sliders
+        public async Task<IActionResult> Index()
+        {
+            var sliders = await _sliderService.GetAllSlidersAsync();
+            return View(sliders);
+        }
+
+        // Show the form to create a new slider
+        public IActionResult Create()
         {
             return View();
         }
 
-        // GET: SliderController/Details/5
-        public ActionResult Details(int id)
-        {
-            return View();
-        }
-
-        // GET: SliderController/Create
-        public ActionResult Create()
-        {
-            return View();
-        }
-
-        // POST: SliderController/Create
+        // Process the creation of a new slider
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create(IFormCollection collection)
+        public async Task<IActionResult> Create(SliderItem slider, IFormFile imageFile)
         {
-            try
+            if (ModelState.IsValid)
             {
+                await _sliderService.CreateSliderAsync(slider, imageFile);
                 return RedirectToAction(nameof(Index));
             }
-            catch
-            {
-                return View();
-            }
+            return View(slider);
         }
 
-        // GET: SliderController/Edit/5
-        public ActionResult Edit(int id)
+        // Show the form to edit an existing slider
+        public async Task<IActionResult> Edit(int id)
         {
-            return View();
+            var slider = await _sliderService.GetSliderByIdAsync(id);
+            if (slider == null)
+            {
+                return NotFound();
+            }
+            return View(slider);
         }
 
-        // POST: SliderController/Edit/5
+        // Process the update of an existing slider
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit(int id, IFormCollection collection)
+        public async Task<IActionResult> Edit(int id, SliderItem slider, IFormFile? imageFile = null)
         {
-            try
+            if (id != slider.Id)
             {
+                return NotFound();
+            }
+
+            if (ModelState.IsValid)
+            {
+                await _sliderService.UpdateSliderAsync(slider, imageFile);
                 return RedirectToAction(nameof(Index));
             }
-            catch
-            {
-                return View();
-            }
+            return View(slider);
         }
 
-        // GET: SliderController/Delete/5
-        public ActionResult Delete(int id)
+        // Soft delete a slider (mark as inactive)
+        public async Task<IActionResult> SoftDelete(int id)
         {
-            return View();
+            await _sliderService.SoftDeleteSliderAsync(id);
+            return RedirectToAction(nameof(Index));
         }
 
-        // POST: SliderController/Delete/5
-        [HttpPost]
+        // Confirm deletion page for hard delete
+        public async Task<IActionResult> DeleteConfirm(int id)
+        {
+            var slider = await _sliderService.GetSliderByIdAsync(id);
+            if (slider == null)
+            {
+                return NotFound();
+            }
+            return View(slider);
+        }
+
+        // Hard delete a slider (remove from database)
+        [HttpPost, ActionName("DeleteConfirm")]
         [ValidateAntiForgeryToken]
-        public ActionResult Delete(int id, IFormCollection collection)
+        public async Task<IActionResult> HardDeleteConfirmed(int id)
         {
-            try
-            {
-                return RedirectToAction(nameof(Index));
-            }
-            catch
-            {
-                return View();
-            }
+            await _sliderService.HardDeleteSliderAsync(id);
+            return RedirectToAction(nameof(Index));
         }
     }
 }

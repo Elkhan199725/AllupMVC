@@ -1,12 +1,12 @@
-﻿using AllupWebApplication.Business.Interfaces;
+﻿using AllupWebApplication.Business.Implementations;
+using AllupWebApplication.Business.Interfaces;
 
-namespace PustokMVC
+namespace AllupMVC;
+
+public static class ServiceRegistration
 {
-    public static class ServiceRegistration
+    public static void AddServices(this IServiceCollection services)
     {
-        public static void AddServices(this IServiceCollection services)
-        {
-            services.AddScoped<ISliderService, SliderService>();
-        }
+        services.AddScoped<ISliderService, SliderService>();
     }
 }

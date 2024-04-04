@@ -1,4 +1,6 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using Microsoft.AspNetCore.Http;
 
 namespace AllupWebApplication.Models;
@@ -15,8 +17,9 @@ public class SliderItem : BaseEntity
     [StringLength(250)]
     public string? ImageUrl { get; set; } // This will store the file path after the file is saved
 
-    // This property will be used to upload files from the form
+    [NotMapped]
     [Display(Name = "Upload Image")]
+    
     public IFormFile? ImageFile { get; set; }
 
     [StringLength(40)]

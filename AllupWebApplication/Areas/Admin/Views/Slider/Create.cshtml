@@ -1,0 +1,38 @@
+﻿@model SliderItem
+<div class="container-fluid">
+    <h1>Create</h1>
+    <form method="post" enctype="multipart/form-data">
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Title</label>
+            <input asp-for="Title" class="form-control">
+            <span asp-validation-for="Title" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Subtitle</label>
+            <input asp-for="Subtitle" class="form-control">
+            <span asp-validation-for="Subtitle" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">ButtonText</label>
+            <input asp-for="ButtonText" class="form-control">
+            <span asp-validation-for="ButtonText" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">ButtonUrl</label>
+            <input asp-for="ButtonUrl" class="form-control">
+            <span asp-validation-for="ButtonUrl" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">IsActive</label>
+            <input asp-for="IsActive" class="form-control">
+            <span asp-validation-for="IsActive" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">ImageFile</label>
+            <input asp-for="ImageFile" class="form-control">
+            <span asp-validation-for="ImageFile" class="text-danger"></span>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Create</button>
+    </form>
+</div>

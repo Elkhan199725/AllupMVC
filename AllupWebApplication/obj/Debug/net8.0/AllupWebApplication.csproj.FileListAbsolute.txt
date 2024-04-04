@@ -512,3 +512,6 @@ C:\Users\elkhantma\Desktop\AllupMVC\AllupWebApplication\obj\Debug\net8.0\refint\
 C:\Users\elkhantma\Desktop\AllupMVC\AllupWebApplication\obj\Debug\net8.0\AllupWebApplication.pdb
 C:\Users\elkhantma\Desktop\AllupMVC\AllupWebApplication\obj\Debug\net8.0\AllupWebApplication.genruntimeconfig.cache
 C:\Users\elkhantma\Desktop\AllupMVC\AllupWebApplication\obj\Debug\net8.0\ref\AllupWebApplication.dll
+C:\Users\elkhantma\Desktop\AllupMVC\AllupWebApplication\bin\Debug\net8.0\DocumentFormat.OpenXml.dll
+C:\Users\elkhantma\Desktop\AllupMVC\AllupWebApplication\bin\Debug\net8.0\DocumentFormat.OpenXml.Framework.dll
+C:\Users\elkhantma\Desktop\AllupMVC\AllupWebApplication\bin\Debug\net8.0\System.IO.Packaging.dll
