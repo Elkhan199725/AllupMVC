@@ -7,8 +7,16 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Folder Include="Areas\Admin\ViewModels\" />
+    <Folder Include="Business\Interfaces\" />
+    <Folder Include="Business\Implementations\" />
+    <Folder Include="Helpers\Exceptions\" />
+    <Folder Include="Helpers\Extensions\" />
     <Folder Include="Models\" />
-    <Folder Include="Components\" />
+    <Folder Include="ViewServices\" />
+    <Folder Include="ViewModels\" />
+    <Folder Include="ViewComponents\" />
+    <Folder Include="Data\" />
     <Folder Include="Views\Shared\Components\Slider\" />
   </ItemGroup>
 
