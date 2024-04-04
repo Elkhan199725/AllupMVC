@@ -17,59 +17,59 @@ build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = AllupWebApplication
 build_property.RootNamespace = AllupWebApplication
-build_property.ProjectDir = C:\Users\Elkhan Mammadli\source\repos\WebApplication\AllupWebApplication\
+build_property.ProjectDir = C:\Users\elkhantma\Desktop\AllupMVC\AllupWebApplication\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\Elkhan Mammadli\source\repos\WebApplication\AllupWebApplication
+build_property.MSBuildProjectDirectory = C:\Users\elkhantma\Desktop\AllupMVC\AllupWebApplication
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/Elkhan Mammadli/source/repos/WebApplication/AllupWebApplication/Areas/Admin/Views/Dashboard/Index.cshtml]
+[C:/Users/elkhantma/Desktop/AllupMVC/AllupWebApplication/Areas/Admin/Views/Dashboard/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcRGFzaGJvYXJkXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Elkhan Mammadli/source/repos/WebApplication/AllupWebApplication/Areas/Admin/Views/Shared/_Layout.cshtml]
+[C:/Users/elkhantma/Desktop/AllupMVC/AllupWebApplication/Areas/Admin/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Elkhan Mammadli/source/repos/WebApplication/AllupWebApplication/Areas/Admin/Views/_ViewImports.cshtml]
+[C:/Users/elkhantma/Desktop/AllupMVC/AllupWebApplication/Areas/Admin/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Elkhan Mammadli/source/repos/WebApplication/AllupWebApplication/Areas/Admin/Views/_ViewStart.cshtml]
+[C:/Users/elkhantma/Desktop/AllupMVC/AllupWebApplication/Areas/Admin/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Elkhan Mammadli/source/repos/WebApplication/AllupWebApplication/Views/Home/Index.cshtml]
+[C:/Users/elkhantma/Desktop/AllupMVC/AllupWebApplication/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Elkhan Mammadli/source/repos/WebApplication/AllupWebApplication/Views/Shared/PartialViews/_BrandSection.cshtml]
+[C:/Users/elkhantma/Desktop/AllupMVC/AllupWebApplication/Views/Shared/PartialViews/_BrandSection.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXFBhcnRpYWxWaWV3c1xfQnJhbmRTZWN0aW9uLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Elkhan Mammadli/source/repos/WebApplication/AllupWebApplication/Views/Shared/PartialViews/_FeatureBanner.cshtml]
+[C:/Users/elkhantma/Desktop/AllupMVC/AllupWebApplication/Views/Shared/PartialViews/_FeatureBanner.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXFBhcnRpYWxWaWV3c1xfRmVhdHVyZUJhbm5lci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Elkhan Mammadli/source/repos/WebApplication/AllupWebApplication/Views/Shared/PartialViews/_Footer.cshtml]
+[C:/Users/elkhantma/Desktop/AllupMVC/AllupWebApplication/Views/Shared/PartialViews/_Footer.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXFBhcnRpYWxWaWV3c1xfRm9vdGVyLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Elkhan Mammadli/source/repos/WebApplication/AllupWebApplication/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/elkhantma/Desktop/AllupMVC/AllupWebApplication/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Elkhan Mammadli/source/repos/WebApplication/AllupWebApplication/Views/_ViewImports.cshtml]
+[C:/Users/elkhantma/Desktop/AllupMVC/AllupWebApplication/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Elkhan Mammadli/source/repos/WebApplication/AllupWebApplication/Views/_ViewStart.cshtml]
+[C:/Users/elkhantma/Desktop/AllupMVC/AllupWebApplication/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Elkhan Mammadli/source/repos/WebApplication/AllupWebApplication/Views/Shared/_Layout.cshtml]
+[C:/Users/elkhantma/Desktop/AllupMVC/AllupWebApplication/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-jwv7eqwf4i

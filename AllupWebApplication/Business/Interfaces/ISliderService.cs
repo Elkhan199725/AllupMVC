@@ -9,9 +9,9 @@ public interface ISliderService
 {
     Task<IEnumerable<SliderItem>> GetAllSlidersAsync();
     Task<IEnumerable<SliderItem>> GetActiveSlidersAsync();
-    Task<SliderItem> GetSliderByIdAsync(Guid id);
+    Task<SliderItem> GetSliderByIdAsync(int id);
     Task CreateSliderAsync(SliderItem slider);
     Task UpdateSliderAsync(SliderItem slider);
-    Task SoftDeleteSliderAsync(Guid id);
-    Task HardDeleteSliderAsync(Guid id);
+    Task SoftDeleteSliderAsync(int id);
+    Task HardDeleteSliderAsync(int id);
 }

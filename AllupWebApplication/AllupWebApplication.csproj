@@ -9,7 +9,6 @@
   <ItemGroup>
     <Folder Include="Areas\Admin\ViewModels\" />
     <Folder Include="Helpers\Exceptions\" />
-    <Folder Include="Helpers\Extensions\" />
     <Folder Include="ViewServices\" />
     <Folder Include="ViewModels\" />
     <Folder Include="ViewComponents\" />

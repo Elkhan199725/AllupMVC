@@ -7945,23 +7945,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Elkhan Mammadli\\.nuget\\packages\\": {},
+    "C:\\Users\\elkhantma\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Elkhan Mammadli\\source\\repos\\WebApplication\\AllupWebApplication\\AllupWebApplication.csproj",
+      "projectUniqueName": "C:\\Users\\elkhantma\\Desktop\\AllupMVC\\AllupWebApplication\\AllupWebApplication.csproj",
       "projectName": "AllupWebApplication",
-      "projectPath": "C:\\Users\\Elkhan Mammadli\\source\\repos\\WebApplication\\AllupWebApplication\\AllupWebApplication.csproj",
-      "packagesPath": "C:\\Users\\Elkhan Mammadli\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Elkhan Mammadli\\source\\repos\\WebApplication\\AllupWebApplication\\obj\\",
+      "projectPath": "C:\\Users\\elkhantma\\Desktop\\AllupMVC\\AllupWebApplication\\AllupWebApplication.csproj",
+      "packagesPath": "C:\\Users\\elkhantma\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\elkhantma\\Desktop\\AllupMVC\\AllupWebApplication\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\Elkhan Mammadli\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\elkhantma\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -7970,7 +7970,6 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {

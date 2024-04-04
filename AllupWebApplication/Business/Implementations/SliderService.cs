@@ -19,7 +19,7 @@ public class SliderService(AllupDbContext context) : ISliderService
         return await _context.SliderItems.Where(s => s.IsActive).ToListAsync();
     }
 
-    public async Task<SliderItem> GetSliderByIdAsync(Guid id)
+    public async Task<SliderItem> GetSliderByIdAsync(int id)
     {
         // Retrieves a single slider by its Id.
         return await _context.SliderItems.FirstOrDefaultAsync(s => s.Id == id);
@@ -52,7 +52,7 @@ public class SliderService(AllupDbContext context) : ISliderService
         await _context.SaveChangesAsync();
     }
 
-    public async Task SoftDeleteSliderAsync(Guid id)
+    public async Task SoftDeleteSliderAsync(int id)
     {
         var slider = await _context.SliderItems.FindAsync(id) ?? throw new InvalidOperationException("Slider not found.");
         slider.IsActive = false; // Soft delete by setting IsActive to false
@@ -60,7 +60,7 @@ public class SliderService(AllupDbContext context) : ISliderService
         await _context.SaveChangesAsync();
     }
 
-    public async Task HardDeleteSliderAsync(Guid id)
+    public async Task HardDeleteSliderAsync(int id)
     {
         var slider = await _context.SliderItems.FindAsync(id) ?? throw new InvalidOperationException("Slider not found.");
         _context.SliderItems.Remove(slider);
