@@ -7,16 +7,20 @@
       "RelativeMoniker": "D:0:0:{DE91E26C-FB05-40AA-9BD0-A8667F482DCB}|AllupWebApplication\\AllupWebApplication.csproj|solutionrelative:allupwebapplication\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DE91E26C-FB05-40AA-9BD0-A8667F482DCB}|AllupWebApplication\\AllupWebApplication.csproj|c:\\users\\elkhan mammadli\\source\\repos\\webapplication\\allupwebapplication\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{DE91E26C-FB05-40AA-9BD0-A8667F482DCB}|AllupWebApplication\\AllupWebApplication.csproj|solutionrelative:allupwebapplication\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{DE91E26C-FB05-40AA-9BD0-A8667F482DCB}|AllupWebApplication\\AllupWebApplication.csproj|c:\\users\\elkhan mammadli\\source\\repos\\webapplication\\allupwebapplication\\views\\shared\\partialviews\\_footer.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DE91E26C-FB05-40AA-9BD0-A8667F482DCB}|AllupWebApplication\\AllupWebApplication.csproj|solutionrelative:allupwebapplication\\views\\shared\\partialviews\\_footer.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DE91E26C-FB05-40AA-9BD0-A8667F482DCB}|AllupWebApplication\\AllupWebApplication.csproj|c:\\users\\elkhan mammadli\\source\\repos\\webapplication\\allupwebapplication\\views\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{DE91E26C-FB05-40AA-9BD0-A8667F482DCB}|AllupWebApplication\\AllupWebApplication.csproj|solutionrelative:allupwebapplication\\views\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{DE91E26C-FB05-40AA-9BD0-A8667F482DCB}|AllupWebApplication\\AllupWebApplication.csproj|c:\\users\\elkhan mammadli\\source\\repos\\webapplication\\allupwebapplication\\views\\shared\\partialviews\\_brandsection.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DE91E26C-FB05-40AA-9BD0-A8667F482DCB}|AllupWebApplication\\AllupWebApplication.csproj|solutionrelative:allupwebapplication\\views\\shared\\partialviews\\_brandsection.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DE91E26C-FB05-40AA-9BD0-A8667F482DCB}|AllupWebApplication\\AllupWebApplication.csproj|c:\\users\\elkhan mammadli\\source\\repos\\webapplication\\allupwebapplication\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{DE91E26C-FB05-40AA-9BD0-A8667F482DCB}|AllupWebApplication\\AllupWebApplication.csproj|C:\\Users\\Elkhan Mammadli\\source\\repos\\WebApplication\\allupwebapplication\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DE91E26C-FB05-40AA-9BD0-A8667F482DCB}|AllupWebApplication\\AllupWebApplication.csproj|solutionrelative:allupwebapplication\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DE91E26C-FB05-40AA-9BD0-A8667F482DCB}|AllupWebApplication\\AllupWebApplication.csproj|C:\\Users\\Elkhan Mammadli\\source\\repos\\WebApplication\\allupwebapplication\\views\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DE91E26C-FB05-40AA-9BD0-A8667F482DCB}|AllupWebApplication\\AllupWebApplication.csproj|solutionrelative:allupwebapplication\\views\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,19 +30,44 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 5,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:3:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:2:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\Elkhan Mammadli\\source\\repos\\WebApplication\\AllupWebApplication\\Views\\Home\\Index.cshtml",
-              "RelativeDocumentMoniker": "AllupWebApplication\\Views\\Home\\Index.cshtml",
-              "ToolTip": "C:\\Users\\Elkhan Mammadli\\source\\repos\\WebApplication\\AllupWebApplication\\Views\\Home\\Index.cshtml",
-              "RelativeToolTip": "AllupWebApplication\\Views\\Home\\Index.cshtml",
-              "ViewState": "AQIAAJQHAAAAAAAAAAAAAKQHAAA5AAAA",
+              "Title": "_Footer.cshtml",
+              "DocumentMoniker": "C:\\Users\\Elkhan Mammadli\\source\\repos\\WebApplication\\AllupWebApplication\\Views\\Shared\\PartialViews\\_Footer.cshtml",
+              "RelativeDocumentMoniker": "AllupWebApplication\\Views\\Shared\\PartialViews\\_Footer.cshtml",
+              "ToolTip": "C:\\Users\\Elkhan Mammadli\\source\\repos\\WebApplication\\AllupWebApplication\\Views\\Shared\\PartialViews\\_Footer.cshtml",
+              "RelativeToolTip": "AllupWebApplication\\Views\\Shared\\PartialViews\\_Footer.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAF4AAAAlAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-04-04T02:22:51.066Z",
+              "WhenOpened": "2024-04-04T04:29:03.177Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "_BrandSection.cshtml",
+              "DocumentMoniker": "C:\\Users\\Elkhan Mammadli\\source\\repos\\WebApplication\\AllupWebApplication\\Views\\Shared\\PartialViews\\_BrandSection.cshtml",
+              "RelativeDocumentMoniker": "AllupWebApplication\\Views\\Shared\\PartialViews\\_BrandSection.cshtml",
+              "ToolTip": "C:\\Users\\Elkhan Mammadli\\source\\repos\\WebApplication\\AllupWebApplication\\Views\\Shared\\PartialViews\\_BrandSection.cshtml",
+              "RelativeToolTip": "AllupWebApplication\\Views\\Shared\\PartialViews\\_BrandSection.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAD4AAAAkAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-04-04T04:20:14.492Z",
               "EditorCaption": ""
             },
             {
@@ -49,14 +78,14 @@
               "RelativeDocumentMoniker": "AllupWebApplication\\Views\\Shared\\_Layout.cshtml",
               "ToolTip": "C:\\Users\\Elkhan Mammadli\\source\\repos\\WebApplication\\AllupWebApplication\\Views\\Shared\\_Layout.cshtml",
               "RelativeToolTip": "AllupWebApplication\\Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AQIAANUEAAAAAAAAAAAAAMsEAAAqAAAA",
+              "ViewState": "AQIAAPADAAAAAAAAAAAAADYEAAAvAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-04-04T00:56:06.801Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "_ViewImports.cshtml",
               "DocumentMoniker": "C:\\Users\\Elkhan Mammadli\\source\\repos\\WebApplication\\AllupWebApplication\\Views\\_ViewImports.cshtml",
               "RelativeDocumentMoniker": "AllupWebApplication\\Views\\_ViewImports.cshtml",
@@ -79,18 +108,6 @@
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-04T00:34:49.114Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:3:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:2:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
             }
           ]
         }

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("AllupWebApplication")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+abba238c03f350151aa298a1748b9e95191bb186")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+46bdec00cb63df1e957e80632a3a0029dd835246")]
 [assembly: System.Reflection.AssemblyProductAttribute("AllupWebApplication")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AllupWebApplication")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
