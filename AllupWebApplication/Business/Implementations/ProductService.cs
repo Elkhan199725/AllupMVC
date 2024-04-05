@@ -99,6 +99,13 @@ namespace AllupWebApplication.Business.Implementations
             // Update properties
             existingProduct.Name = product.Name;
             existingProduct.Description = product.Description;
+            existingProduct.Category = product.Category;
+            existingProduct.CostPrice = product.CostPrice;
+            existingProduct.SalePrice = product.SalePrice;
+            existingProduct.DiscountPercent = product.DiscountPercent;
+            existingProduct.IsNew = product.IsNew;
+            existingProduct.IsFeatured = product.IsFeatured;
+            existingProduct.IsBestSeller = product.IsBestSeller;
             // Continue updating other properties as necessary
 
             // Assume we decide which image is the poster based on some property or position

@@ -1,0 +1,46 @@
+﻿@model List<Product>
+@{
+    int counter = 0;
+}
+<div class="container-fluid">
+    <div class="row align-items-center justify-content-between">
+        <h1>Product:</h1>
+        <a asp-action="create" asp-controller="product" class="btn btn-primary">Create</a>
+    </div>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Name</th>
+                <th scope="col">Image</th>
+                <th scope="col">Category</th>
+                <th scope="col">ActiveStatus</th>
+                <th scope="col">Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                counter++;
+                <tr>
+                    <th scope="row">@counter</th>
+                    <td>@item.Name</td>
+                    <td>
+                        <img style="width:150px" src="~/uploads/products/@item.ProductImages.Where(x=>x.IsPoster == true).FirstOrDefault()?.ImageUrl" />
+                    </td>
+                    <td>@item.Category</td>
+                    <td>@item.IsActive</td>
+                    <td>
+                        <a asp-action="edit" asp-controller="product" asp-route-id="@item.Id" class="btn btn-warning">Edit</a>
+                        <a asp-action="softdeleteconfirm" asp-controller="product" asp-route-id="@item.Id" class="btn btn-info delete-btn">SoftDelete</a>
+                        <a asp-action="harddeleteconfirm" asp-controller="product" asp-route-id="@item.Id" class="btn btn-danger delete-btn">HardDelete</a>
+                    </td>
+                </tr>
+            }
+
+        </tbody>
+    </table>
+</div>
+
+

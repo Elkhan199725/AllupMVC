@@ -1,0 +1,28 @@
+﻿@model AllupWebApplication.Models.Category
+
+@{
+    ViewData["Title"] = "Confirm Soft Delete";
+}
+
+<div class="container mt-5">
+    <h2>Confirm Hard Delete</h2>
+    <hr />
+    <div class="alert alert-warning" role="alert">
+        Are you sure you want to remove this category item permanently?
+        <strong>@Model.Name</strong>
+    </div>
+    <div>
+        <!-- Details about the category item to give the user context about what they are deleting -->
+        <p>Title: @Model.Name</p>
+        <p>Subtitle: @Model.Description ?? "N/A"</p>
+        <!-- Add any other relevant details you think are necessary -->
+    </div>
+    <form asp-action="HardDeleteConfirm" method="post">
+        @Html.AntiForgeryToken()
+        <!-- Hidden field for the ID -->
+        <input type="hidden" name="id" value="@Model.Id" />
+        <!-- Confirm and Cancel buttons -->
+        <button type="submit" class="btn btn-danger">Confirm Hard Delete</button>
+        <a asp-action="Index" asp-area="Admin" class="btn btn-secondary">Cancel</a>
+    </form>
+</div>
