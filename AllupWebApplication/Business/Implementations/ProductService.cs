@@ -1,165 +1,170 @@
-﻿using AllupWebApplication.Data;
-using AllupWebApplication.Helpers.Extensions;
+﻿using Microsoft.EntityFrameworkCore;
 using AllupWebApplication.Models;
 using AllupWebApplication.Business.Interfaces;
 using Microsoft.AspNetCore.Http;
-using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
 using System.Threading.Tasks;
+using AllupWebApplication.Helpers.Extensions;
+using AllupWebApplication.Data; // Ensure FileManager is included here.
 
-namespace AllupWebApplication.Business.Implementations
+public class ProductService : IProductService
 {
-    public class ProductService : IProductService
+    private readonly AllupDbContext _context;
+    private readonly IWebHostEnvironment _webHostEnvironment;
+
+    public ProductService(AllupDbContext context, IWebHostEnvironment webHostEnvironment)
     {
-        private readonly AllupDbContext _context;
-        private readonly IWebHostEnvironment _webHostEnvironment;
+        _context = context;
+        _webHostEnvironment = webHostEnvironment;
+    }
 
-        public ProductService(AllupDbContext context, IWebHostEnvironment webHostEnvironment)
+    public async Task<IEnumerable<Product>> GetAllProductsAsync(Expression<Func<Product, bool>>? filter = null, params string[] includes)
+    {
+        IQueryable<Product> query = _context.Products.AsQueryable();
+
+        if (filter != null)
         {
-            _context = context;
-            _webHostEnvironment = webHostEnvironment;
+            query = query.Where(filter);
         }
 
-        public async Task<IEnumerable<Product>> GetAllProductsAsync(Expression<Func<Product, bool>>? filter = null, params string[] includes)
+        foreach (var include in includes)
         {
-            IQueryable<Product> query = _context.Products.AsQueryable();
+            query = query.Include(include);
+        }
 
-            if (filter != null)
+        return await query.ToListAsync();
+    }
+
+    public async Task<IEnumerable<Product>> GetActiveProductsAsync(Expression<Func<Product, bool>>? filter = null, params string[] includes)
+    {
+        filter = filter == null ? p => p.IsActive : CombineExpressions(p => p.IsActive, filter);
+
+        return await GetAllProductsAsync(filter, includes);
+    }
+
+    public async Task<Product> GetProductByIdAsync(int id)
+    {
+        var product = await _context.Products.Include(p => p.ProductImages).FirstOrDefaultAsync(p => p.Id == id);
+        if (product == null) throw new ArgumentException($"Product with ID {id} not found.");
+        return product;
+    }
+
+    public async Task CreateProductAsync(Product product, IFormFile? posterImage, IFormFile? hoverImage, IEnumerable<IFormFile>? additionalImages = null)
+    {
+        if (posterImage != null)
+        {
+            var posterImageUrl = await FileManager.SaveFileAsync(posterImage, _webHostEnvironment.WebRootPath, "uploads/products");
+            product.ProductImages.Add(new ProductImage { ImageUrl = posterImageUrl, IsPoster = true });
+        }
+
+        if (hoverImage != null)
+        {
+            var hoverImageUrl = await FileManager.SaveFileAsync(hoverImage, _webHostEnvironment.WebRootPath, "uploads/products");
+            product.ProductImages.Add(new ProductImage { ImageUrl = hoverImageUrl, IsPoster = false });
+        }
+
+        if (additionalImages != null)
+        {
+            foreach (var image in additionalImages)
             {
-                query = query.Where(filter);
+                var imageUrl = await image.SaveFileAsync(_webHostEnvironment.WebRootPath, "uploads/products");
+                product.ProductImages.Add(new ProductImage { ImageUrl = imageUrl });
             }
-
-            if (includes != null)
-            {
-                foreach (var include in includes)
-                {
-                    query = query.Include(include);
-                }
-            }
-
-            return await query.ToListAsync();
         }
+        product.SetCreatedDate();
+        await _context.Products.AddAsync(product);
+        await _context.SaveChangesAsync();
+    }
 
-        public async Task<IEnumerable<Product>> GetActiveProductsAsync(Expression<Func<Product, bool>>? filter = null, params string[] includes)
+    public async Task UpdateProductAsync(Product product, IFormFile? posterImage = null, IFormFile? hoverImage = null, IEnumerable<IFormFile>? additionalImages = null, IEnumerable<int>? imageIdsToDelete = null)
+    {
+        var existingProduct = await _context.Products.Include(p => p.ProductImages).FirstOrDefaultAsync(p => p.Id == product.Id);
+        if (existingProduct == null) throw new KeyNotFoundException($"Product with ID {product.Id} not found.");
+
+        // Update basic properties
+        existingProduct.Name = product.Name;
+        existingProduct.Description = product.Description;
+        // Update additional properties as needed
+
+        // Update Poster and Hover Images if provided
+        if (posterImage != null)
         {
-            filter = filter == null ? p => p.IsActive : CombineExpressions(p => p.IsActive, filter);
-
-            return await GetAllProductsAsync(filter, includes);
-        }
-
-        public async Task<Product> GetProductByIdAsync(int id)
-        {
-            var product = await _context.Products.FindAsync(id);
-            if (product == null) throw new ArgumentException($"Product with ID {id} not found.");
-            return product;
-        }
-
-        public async Task CreateProductAsync(Product product, IFormFile posterImage, IEnumerable<IFormFile>? additionalImages = null)
-        {
-            // Handle the poster image
-            if (posterImage != null)
+            // Assuming existingProduct.ProductImages is initialized
+            var existingPoster = existingProduct.ProductImages.FirstOrDefault(img => img.IsPoster == true);
+            if (existingPoster != null)
             {
-                var posterImageUrl = await posterImage.SaveFileAsync(_webHostEnvironment.WebRootPath, "uploads/products");
-                product.ProductImages.Add(new ProductImage { ImageUrl = posterImageUrl, IsPoster = true });
+                FileManager.DeleteFile(_webHostEnvironment.WebRootPath, "uploads/products", existingPoster.ImageUrl);
             }
-
-            // Handle the hover image if it's separate from the poster and additional images
-            if (product.HoverImageFile != null)
-            {
-                var hoverImageUrl = await product.HoverImageFile.SaveFileAsync(_webHostEnvironment.WebRootPath, "uploads/products");
-                product.ProductImages.Add(new ProductImage { ImageUrl = hoverImageUrl, IsPoster = false });
-            }
-
-            // Handle additional images
-            if (additionalImages != null)
-            {
-                foreach (var image in additionalImages)
-                {
-                    var imageUrl = await image.SaveFileAsync(_webHostEnvironment.WebRootPath, "uploads/products");
-                    product.ProductImages.Add(new ProductImage { ImageUrl = imageUrl });
-                }
-            }
-
-            // Since ProductImages is a relational property, ensure it's initialized to avoid a NullReferenceException
-            if (product.ProductImages == null) product.ProductImages = new List<ProductImage>();
-
-            await _context.Products.AddAsync(product);
-            await _context.SaveChangesAsync();
+            existingPoster.ImageUrl = await FileManager.SaveFileAsync(posterImage, _webHostEnvironment.WebRootPath, "uploads/products");
         }
 
-
-        public async Task UpdateProductAsync(Product product, IFormFile? posterImage = null, IEnumerable<IFormFile>? additionalImages = null)
+        if (hoverImage != null)
         {
-            var existingProduct = await _context.Products.Include(p => p.ProductImages).FirstOrDefaultAsync(p => p.Id == product.Id);
-            if (existingProduct == null) throw new ArgumentException($"Product with ID {product.Id} not found.");
-
-            // Update properties
-            existingProduct.Name = product.Name;
-            existingProduct.Description = product.Description;
-            existingProduct.Category = product.Category;
-            existingProduct.CostPrice = product.CostPrice;
-            existingProduct.SalePrice = product.SalePrice;
-            existingProduct.DiscountPercent = product.DiscountPercent;
-            existingProduct.IsNew = product.IsNew;
-            existingProduct.IsFeatured = product.IsFeatured;
-            existingProduct.IsBestSeller = product.IsBestSeller;
-            // Continue updating other properties as necessary
-
-            // Assume we decide which image is the poster based on some property or position
-            var existingPosterImage = existingProduct.ProductImages.FirstOrDefault(img => img.IsPoster == true);
-            // Handle poster image update
-            if (posterImage != null && existingPosterImage != null)
+            var existingHover = existingProduct.ProductImages.FirstOrDefault(img => img.IsPoster == false);
+            if (existingHover != null)
             {
-                // Assuming FileManager.DeleteFile handles null fileName gracefully
-                FileManager.DeleteFile(_webHostEnvironment.WebRootPath, "uploads/products", existingPosterImage.ImageUrl);
-                existingPosterImage.ImageUrl = await posterImage.SaveFileAsync(_webHostEnvironment.WebRootPath, "uploads/products");
+                FileManager.DeleteFile(_webHostEnvironment.WebRootPath, "uploads/products", existingHover.ImageUrl);
             }
+            existingHover.ImageUrl = await FileManager.SaveFileAsync(hoverImage, _webHostEnvironment.WebRootPath, "uploads/products");
+        }
 
-            // Optionally clear existing additional images and replace with new ones
-            // This step depends on your requirements. You might also want to just add new images or allow users to select images to delete.
-            var additionalImagesToDelete = existingProduct.ProductImages.Where(img => img.IsPoster == null || img.IsPoster == false).ToList();
-            foreach (var img in additionalImagesToDelete)
+        // Handle additional images
+        if (additionalImages != null)
+        {
+            foreach (var image in additionalImages)
             {
-                FileManager.DeleteFile(_webHostEnvironment.WebRootPath, "uploads/products", img.ImageUrl);
-                _context.ProductImages.Remove(img);
+                var imageUrl = await image.SaveFileAsync(_webHostEnvironment.WebRootPath, "uploads/products");
+                existingProduct.ProductImages.Add(new ProductImage { ImageUrl = imageUrl });
             }
+        }
 
-            if (additionalImages != null)
+        // Remove selected images
+        if (imageIdsToDelete != null)
+        {
+            var imagesToRemove = existingProduct.ProductImages.Where(img => imageIdsToDelete.Contains(img.Id)).ToList();
+            foreach (var image in imagesToRemove)
             {
-                foreach (var image in additionalImages)
-                {
-                    var imageUrl = await image.SaveFileAsync(_webHostEnvironment.WebRootPath, "uploads/products");
-                    existingProduct.ProductImages.Add(new ProductImage { ImageUrl = imageUrl, ProductId = existingProduct.Id });
-                }
+                FileManager.DeleteFile(_webHostEnvironment.WebRootPath, "uploads/products", image.ImageUrl);
+                _context.ProductImages.Remove(image);
             }
-
-            _context.Products.Update(existingProduct);
-            await _context.SaveChangesAsync();
         }
+        // Update modified date
+        existingProduct.UpdateModifiedDate();
 
+        _context.Products.Update(existingProduct);
+        await _context.SaveChangesAsync();
+    }
 
-        public async Task SoftDeleteProductAsync(int id)
+    public async Task SoftDeleteProductAsync(int id)
+    {
+        var product = await _context.Products.FindAsync(id);
+        if (product == null) throw new KeyNotFoundException($"Product with ID {id} not found.");
+
+        product.IsActive = false;
+        await _context.SaveChangesAsync();
+    }
+
+    public async Task HardDeleteProductAsync(int id)
+    {
+        var product = await _context.Products.Include(p => p.ProductImages).FirstOrDefaultAsync(p => p.Id == id);
+        if (product == null) throw new KeyNotFoundException($"Product with ID {id} not found.");
+
+        foreach (var image in product.ProductImages)
         {
-            var product = await GetProductByIdAsync(id);
-            product.IsActive = false;
-            await _context.SaveChangesAsync();
+            FileManager.DeleteFile(_webHostEnvironment.WebRootPath, "uploads/products", image.ImageUrl);
         }
 
-        public async Task HardDeleteProductAsync(int id)
-        {
-            var product = await GetProductByIdAsync(id);
-            _context.Products.Remove(product);
-            await _context.SaveChangesAsync();
-        }
+        _context.Products.Remove(product);
+        await _context.SaveChangesAsync();
+    }
 
-        // Helper method to combine two expressions with an AND operation
-        private static Expression<Func<Product, bool>> CombineExpressions(Expression<Func<Product, bool>> expr1, Expression<Func<Product, bool>>? expr2)
-        {
-            var invokedExpr = Expression.Invoke(expr2, expr1.Parameters.Cast<Expression>());
-            return Expression.Lambda<Func<Product, bool>>(Expression.AndAlso(expr1.Body, invokedExpr), expr1.Parameters);
-        }
+    // Helper method to combine expressions with AND
+    private static Expression<Func<T, bool>> CombineExpressions<T>(Expression<Func<T, bool>> expr1, Expression<Func<T, bool>> expr2)
+    {
+        var invokedExpr = Expression.Invoke(expr2, expr1.Parameters);
+        return Expression.Lambda<Func<T, bool>>(Expression.AndAlso(expr1.Body, invokedExpr), expr1.Parameters);
     }
 }

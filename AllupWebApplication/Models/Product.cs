@@ -9,10 +9,8 @@ namespace AllupWebApplication.Models;
 public class Product : BaseEntity
 {
     public int CategoryId { get; set; }
-
     [StringLength(50)]
     public string Name { get; set; }
-
     [StringLength(350)]
     public string Description { get; set; }
     public string ProductCode { get; set; }
@@ -25,10 +23,10 @@ public class Product : BaseEntity
     public bool IsAvailable { get; set; }
     public int StockCount { get; set; }
     // Relationship to Category
-    public virtual Category Category { get; set; }
+    public virtual Category? Category { get; set; }
 
     // Relationship to ProductImage
-    public virtual List<ProductImage> ProductImages { get; set; }
+    public virtual List<ProductImage>? ProductImages { get; set; }
 
     [NotMapped]
     public IFormFile? PosterImageFile { get; set; }

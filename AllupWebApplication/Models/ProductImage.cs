@@ -11,5 +11,5 @@ public class ProductImage : BaseEntity
     public bool? IsPoster { get; set; }
 
     // Relationship to Product
-    public virtual Product Product { get; set; }
+    public virtual Product? Product { get; set; }
 }
