@@ -8,36 +8,48 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
-builder.Services.AddDbContext<AllupDbContext>(opt =>
+// Configure Entity Framework Core with SQL Server
+builder.Services.AddDbContext<AllupDbContext>(options =>
 {
-    opt.UseSqlServer(builder.Configuration.GetConnectionString("default"));
+    options.UseSqlServer(builder.Configuration.GetConnectionString("default"));
 });
 
-//builder.Services.AddServices();
+// Method extension to encapsulate service registrations
 builder.Services.AddServices();
-var app = builder.Build();
 
+var app = builder.Build();
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
 {
+    // Use exception handler for production environment
     app.UseExceptionHandler("/Home/Error");
-    // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
+
+    // Enforce strict transport security
     app.UseHsts();
 }
 
+// Use HTTPS redirection
 app.UseHttpsRedirection();
+
+// Serve static files (e.g., JavaScript, CSS, images)
 app.UseStaticFiles();
+
+// Enable routing
 app.UseRouting();
+
+// Enable authentication/authorization middleware
 app.UseAuthorization();
 
+// Define routing for areas
 app.MapControllerRoute(
     name: "areas",
     pattern: "{area:exists}/{controller=Home}/{action=Index}/{id?}");
 
-
+// Define default routing
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
 
+// Start the application
 app.Run();

@@ -75,7 +75,7 @@ namespace AllupWebApplication.Business.Implementations
         public async Task SoftDeleteSliderAsync(int id)
         {
             var slider = await _context.SliderItems.FindAsync(id);
-            if (slider != null)
+            if (slider != null && slider.IsActive == true)
             {
                 slider.IsActive = false;
                 slider.UpdateModifiedDate();

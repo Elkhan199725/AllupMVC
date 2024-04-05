@@ -8,5 +8,7 @@ public static class ServiceRegistration
     public static void AddServices(this IServiceCollection services)
     {
         services.AddScoped<ISliderService, SliderService>();
+        services.AddScoped<ICategoryService, CategoryService>();
+        services.AddScoped<IProductService, ProductService>();
     }
 }
