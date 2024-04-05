@@ -72,15 +72,9 @@ namespace AllupWebApplication.Controllers
             return View(slider);
         }
 
-        // Soft delete a slider (mark as inactive)
-        public async Task<IActionResult> SoftDelete(int id)
-        {
-            await _sliderService.SoftDeleteSliderAsync(id);
-            return RedirectToAction(nameof(Index));
-        }
-
-        // Confirm deletion page for hard delete
-        public async Task<IActionResult> DeleteConfirm(int id)
+        // GET: Shows confirmation page for soft delete
+        [HttpGet]
+        public async Task<IActionResult> SoftDeleteConfirm(int id)
         {
             var slider = await _sliderService.GetSliderByIdAsync(id);
             if (slider == null)
@@ -90,13 +84,46 @@ namespace AllupWebApplication.Controllers
             return View(slider);
         }
 
-        // Hard delete a slider (remove from database)
-        [HttpGet, ActionName("HardDeleteConfirmed")]
+        // POST: Performs the actual soft delete
+        [HttpPost, ActionName("SoftDeleteConfirmed")]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> SoftDeleteConfirmed(int id)
+        {
+            var slider = await _sliderService.GetSliderByIdAsync(id);
+            if (slider != null)
+            {
+                await _sliderService.SoftDeleteSliderAsync(id);
+                return RedirectToAction(nameof(Index), new { area = "Admin" });
+            }
+            return NotFound();
+        }
 
+        // GET: Shows confirmation page for hard delete
+        [HttpGet]
+        public async Task<IActionResult> HardDeleteConfirm(int id)
+        {
+            var slider = await _sliderService.GetSliderByIdAsync(id);
+            if (slider == null)
+            {
+                return NotFound();
+            }
+            return View(slider);
+        }
+
+        // POST: Performs the actual hard delete
+        [HttpPost, ActionName("HardDeleteConfirm")]
+        [ValidateAntiForgeryToken]
         public async Task<IActionResult> HardDeleteConfirmed(int id)
         {
+            var sliderExists = await _sliderService.GetSliderByIdAsync(id) != null;
+            if (!sliderExists)
+            {
+                return NotFound();
+            }
             await _sliderService.HardDeleteSliderAsync(id);
-            return RedirectToAction(nameof(Index));
+            return RedirectToAction(nameof(Index), new { area = "Admin" });
         }
+
+
     }
 }

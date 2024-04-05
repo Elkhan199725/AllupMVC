@@ -1,0 +1,26 @@
+﻿@model AllupWebApplication.Models.SliderItem
+
+@{
+    ViewData["Title"] = "Confirm Soft Delete";
+}
+
+<div class="container mt-5">
+    <h2>Confirm Soft Delete</h2>
+    <hr />
+    <div class="alert alert-warning" role="alert">
+        Are you sure you want to deactivate this slider item?
+        <strong>@Model.Title</strong>
+    </div>
+    <div>
+        <!-- Details about the slider item to give the user context about what they are deleting -->
+        <p>Title: @Model.Title</p>
+        <p>Subtitle: @Model.Subtitle ?? "N/A"</p>
+        <!-- Add any other relevant details you think are necessary -->
+    </div>
+    <form asp-action="SoftDeleteConfirmed" method="post">
+        @Html.AntiForgeryToken()
+        <input type="hidden" name="id" value="@Model.Id" />
+        <button type="submit" class="btn btn-danger">Confirm Delete</button>
+        <a asp-action="Index" class="btn btn-secondary">Cancel</a>
+    </form>
+</div>

@@ -86,11 +86,17 @@ namespace AllupWebApplication.Business.Implementations
         public async Task HardDeleteSliderAsync(int id)
         {
             var slider = await _context.SliderItems.FindAsync(id);
-            if (slider != null)
+            if (slider == null)
             {
-                _context.SliderItems.Remove(slider);
-                await _context.SaveChangesAsync();
+                throw new KeyNotFoundException("Slider not found.");
             }
+            if (slider.IsActive)
+            {
+                throw new InvalidOperationException("Cannot hard delete an active slider. Please deactivate the slider first.");
+            }
+
+            _context.SliderItems.Remove(slider);
+            await _context.SaveChangesAsync();
         }
     }
 }

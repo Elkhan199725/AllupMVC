@@ -515,3 +515,6 @@ C:\Users\elkhantma\Desktop\AllupMVC\AllupWebApplication\obj\Debug\net8.0\ref\All
 C:\Users\elkhantma\Desktop\AllupMVC\AllupWebApplication\bin\Debug\net8.0\DocumentFormat.OpenXml.dll
 C:\Users\elkhantma\Desktop\AllupMVC\AllupWebApplication\bin\Debug\net8.0\DocumentFormat.OpenXml.Framework.dll
 C:\Users\elkhantma\Desktop\AllupMVC\AllupWebApplication\bin\Debug\net8.0\System.IO.Packaging.dll
+C:\Users\Elkhan Mammadli\source\repos\WebApplication\AllupWebApplication\bin\Debug\net8.0\DocumentFormat.OpenXml.dll
+C:\Users\Elkhan Mammadli\source\repos\WebApplication\AllupWebApplication\bin\Debug\net8.0\DocumentFormat.OpenXml.Framework.dll
+C:\Users\Elkhan Mammadli\source\repos\WebApplication\AllupWebApplication\bin\Debug\net8.0\System.IO.Packaging.dll
