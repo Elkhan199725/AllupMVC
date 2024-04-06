@@ -24,10 +24,21 @@ public class ProductService : IProductService
     public async Task<IEnumerable<Product>> GetAllProductsAsync(Expression<Func<Product, bool>>? filter = null, params string[] includes)
     {
         IQueryable<Product> query = _context.Products.AsQueryable();
-        if (filter != null) query = query.Where(filter);
-        foreach (var include in includes ?? new string[] { }) query = query.Include(include);
+
+        // Dynamically include specified related entities
+        foreach (var include in includes ?? Array.Empty<string>())
+        {
+            query = query.Include(include);
+        }
+
+        if (filter != null)
+        {
+            query = query.Where(filter);
+        }
+
         return await query.ToListAsync();
     }
+
 
     public async Task<Product> GetProductByIdAsync(int id)
     {
@@ -39,33 +50,48 @@ public class ProductService : IProductService
 
     public async Task CreateProductAsync(Product product, IFormFile? posterImage, IFormFile? hoverImage, IEnumerable<IFormFile>? additionalImages = null)
     {
-        if (posterImage != null)
+        // Initialize ProductImages if it's null to avoid NullReferenceException
+        if (product.ProductImages == null)
         {
+            product.ProductImages = new List<ProductImage>();
+        }
+
+        // Handle the poster image
+        if (posterImage != null && posterImage.Length > 0)
+        {
+            var posterImageUrl = await FileManager.SaveFileAsync(posterImage, _webHostEnvironment.WebRootPath, "uploads/products");
             product.ProductImages.Add(new ProductImage
             {
-                ImageUrl = await FileManager.SaveFileAsync(posterImage, _webHostEnvironment.WebRootPath, "uploads/products"),
+                ImageUrl = posterImageUrl,
                 IsPoster = true
             });
         }
 
-        if (hoverImage != null)
+        // Handle the hover image
+        if (hoverImage != null && hoverImage.Length > 0)
         {
+            var hoverImageUrl = await FileManager.SaveFileAsync(hoverImage, _webHostEnvironment.WebRootPath, "uploads/products");
             product.ProductImages.Add(new ProductImage
             {
-                ImageUrl = await FileManager.SaveFileAsync(hoverImage, _webHostEnvironment.WebRootPath, "uploads/products"),
+                ImageUrl = hoverImageUrl,
                 IsPoster = false
             });
         }
 
+        // Handle additional images
         if (additionalImages != null)
         {
             foreach (var image in additionalImages)
             {
-                product.ProductImages.Add(new ProductImage
+                if (image.Length > 0)
                 {
-                    ImageUrl = await FileManager.SaveFileAsync(image, _webHostEnvironment.WebRootPath, "uploads/products"),
-                    IsPoster = null
-                });
+                    var imageUrl = await FileManager.SaveFileAsync(image, _webHostEnvironment.WebRootPath, "uploads/products");
+                    product.ProductImages.Add(new ProductImage
+                    {
+                        ImageUrl = imageUrl,
+                        IsPoster = null // Not a poster or hover image
+                    });
+                }
             }
         }
 
@@ -75,6 +101,10 @@ public class ProductService : IProductService
         await _context.Products.AddAsync(product);
         await _context.SaveChangesAsync();
     }
+
+
+
+
 
     public async Task UpdateProductAsync(Product product, IFormFile? posterImage = null, IFormFile? hoverImage = null, IEnumerable<IFormFile>? additionalImages = null, IEnumerable<int>? imageIdsToDelete = null)
     {
@@ -97,35 +127,34 @@ public class ProductService : IProductService
         existingProduct.IsAvailable = product.IsAvailable;
         // Add other fields as necessary
 
-        // Update poster and hover images if provided
+        // Handle poster image update
         if (posterImage != null)
         {
-            var existingPoster = existingProduct.ProductImages.FirstOrDefault(img => img.IsPoster == true);
-            if (existingPoster != null)
+            var existingPosterImage = existingProduct.ProductImages.FirstOrDefault(img => img.IsPoster == true);
+            if (existingPosterImage != null)
             {
-                FileManager.DeleteFile(_webHostEnvironment.WebRootPath, "uploads/products", existingPoster.ImageUrl);
-                existingProduct.ProductImages.Remove(existingPoster);
+                // If there is an existing poster image, delete it
+                FileManager.DeleteFile(_webHostEnvironment.WebRootPath, "uploads/products", existingPosterImage.ImageUrl);
+                _context.ProductImages.Remove(existingPosterImage);
             }
-            existingProduct.ProductImages.Add(new ProductImage
-            {
-                ImageUrl = await FileManager.SaveFileAsync(posterImage, _webHostEnvironment.WebRootPath, "uploads/products"),
-                IsPoster = true
-            });
+            // Add the new poster image
+            var posterImageUrl = await FileManager.SaveFileAsync(posterImage, _webHostEnvironment.WebRootPath, "uploads/products");
+            existingProduct.ProductImages.Add(new ProductImage { ImageUrl = posterImageUrl, IsPoster = true });
         }
 
+        // Handle hover image update
         if (hoverImage != null)
         {
-            var existingHover = existingProduct.ProductImages.FirstOrDefault(img => img.IsPoster == false);
-            if (existingHover != null)
+            var existingHoverImage = existingProduct.ProductImages.FirstOrDefault(img => img.IsPoster == false);
+            if (existingHoverImage != null)
             {
-                FileManager.DeleteFile(_webHostEnvironment.WebRootPath, "uploads/products", existingHover.ImageUrl);
-                existingProduct.ProductImages.Remove(existingHover);
+                // If there is an existing hover image, delete it
+                FileManager.DeleteFile(_webHostEnvironment.WebRootPath, "uploads/products", existingHoverImage.ImageUrl);
+                _context.ProductImages.Remove(existingHoverImage);
             }
-            existingProduct.ProductImages.Add(new ProductImage
-            {
-                ImageUrl = await FileManager.SaveFileAsync(hoverImage, _webHostEnvironment.WebRootPath, "uploads/products"),
-                IsPoster = false
-            });
+            // Add the new hover image
+            var hoverImageUrl = await FileManager.SaveFileAsync(hoverImage, _webHostEnvironment.WebRootPath, "uploads/products");
+            existingProduct.ProductImages.Add(new ProductImage { ImageUrl = hoverImageUrl, IsPoster = false });
         }
 
         // Handle additional images
@@ -133,22 +162,25 @@ public class ProductService : IProductService
         {
             foreach (var image in additionalImages)
             {
-                existingProduct.ProductImages.Add(new ProductImage
+                // Prevent adding the poster or hover image as an additional image
+                if (posterImage != null && image.FileName == posterImage.FileName ||
+                    hoverImage != null && image.FileName == hoverImage.FileName)
                 {
-                    ImageUrl = await FileManager.SaveFileAsync(image, _webHostEnvironment.WebRootPath, "uploads/products"),
-                    IsPoster = null
-                });
+                    continue;
+                }
+                var imageUrl = await FileManager.SaveFileAsync(image, _webHostEnvironment.WebRootPath, "uploads/products");
+                existingProduct.ProductImages.Add(new ProductImage { ImageUrl = imageUrl, IsPoster = null });
             }
         }
 
         // Handle image deletions
-        if (imageIdsToDelete != null && imageIdsToDelete.Any())
+        if (imageIdsToDelete != null)
         {
-            var imagesToDelete = existingProduct.ProductImages.Where(img => imageIdsToDelete.Contains(img.Id)).ToList();
-            foreach (var image in imagesToDelete)
+            var imagesToRemove = existingProduct.ProductImages.Where(img => imageIdsToDelete.Contains(img.Id)).ToList();
+            foreach (var imageToRemove in imagesToRemove)
             {
-                FileManager.DeleteFile(_webHostEnvironment.WebRootPath, "uploads/products", image.ImageUrl);
-                existingProduct.ProductImages.Remove(image);
+                FileManager.DeleteFile(_webHostEnvironment.WebRootPath, "uploads/products", imageToRemove.ImageUrl);
+                _context.ProductImages.Remove(imageToRemove);
             }
         }
         // Update modified date
@@ -174,11 +206,11 @@ public class ProductService : IProductService
         var product = await _context.Products.FindAsync(id);
         if (product == null)
         {
-            throw new KeyNotFoundException("Category not found.");
+            throw new KeyNotFoundException("Product not found.");
         }
         if (product.IsActive)
         {
-            throw new InvalidOperationException("Cannot hard delete an active category. Please deactivate the category first.");
+            throw new InvalidOperationException("Cannot hard delete an active product. Please deactivate the product first.");
         }
 
         _context.Products.Remove(product);

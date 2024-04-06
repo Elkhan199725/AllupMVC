@@ -1,20 +1,27 @@
-﻿@model List<SliderItem>
+﻿@model List<AllupWebApplication.Models.SliderItem>
+
 @{
+    ViewData["Title"] = "Sliders";
     int counter = 0;
 }
-<div class="container-fluid">
-    <div class="row align-items-center justify-content-between">
-        <h1>Sliders:</h1>
-        <a asp-action="create" asp-controller="slider" class="btn btn-primary">Create</a>
+
+<div class="container mt-4">
+    <div class="row mb-2">
+        <div class="col">
+            <h1>Sliders</h1>
+        </div>
+        <div class="col text-right">
+            <a asp-action="Create" asp-controller="Slider" class="btn btn-primary">Create New Slider</a>
+        </div>
     </div>
 
-    <table class="table">
-        <thead>
+    <table class="table table-bordered table-hover">
+        <thead class="thead-dark">
             <tr>
                 <th scope="col">#</th>
                 <th scope="col">Title</th>
                 <th scope="col">Image</th>
-                <th scope="col">ActiveStatus</th>
+                <th scope="col">Active Status</th>
                 <th scope="col">Actions</th>
             </tr>
         </thead>
@@ -26,17 +33,23 @@
                     <th scope="row">@counter</th>
                     <td>@item.Title</td>
                     <td>
-                        <img style="width:150px" src="~/uploads/sliders/@item.ImageUrl" />
+                        @if (!string.IsNullOrEmpty(item.ImageUrl))
+                        {
+                            <img class="img-fluid" style="width:150px; height:auto;" src="~/uploads/sliders/@item.ImageUrl" alt="Slider Image">
+                        }
+                        else
+                        {
+                            <span>No Image Available</span>
+                        }
                     </td>
-                    <td>@item.IsActive</td>
+                    <td>@(item.IsActive ? "Active" : "Inactive")</td>
                     <td>
-                        <a asp-action="edit" asp-controller="slider" asp-route-id="@item.Id" class="btn btn-warning">Edit</a>
-                        <a asp-action="softdeleteconfirm" asp-controller="slider" asp-route-id="@item.Id" class="btn btn-info delete-btn">SoftDelete</a>
-                        <a asp-action="harddeleteconfirm" asp-controller="slider" asp-route-id="@item.Id" class="btn btn-danger delete-btn">HardDelete</a>
+                        <a asp-action="Edit" asp-controller="Slider" asp-route-id="@item.Id" class="btn btn-sm btn-warning">Edit</a>
+                        <a asp-action="SoftDeleteConfirm" asp-controller="Slider" asp-route-id="@item.Id" class="btn btn-sm btn-info">Soft Delete</a>
+                        <a asp-action="HardDeleteConfirm" asp-controller="Slider" asp-route-id="@item.Id" class="btn btn-sm btn-danger">Hard Delete</a>
                     </td>
                 </tr>
             }
-
         </tbody>
     </table>
 </div>
