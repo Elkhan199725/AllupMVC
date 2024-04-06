@@ -74,6 +74,7 @@ public class CategoryService : ICategoryService
         {
             existingCategory.Name = category.Name;
             existingCategory.Description = category.Description;
+            existingCategory.IsActive = category.IsActive;
 
             if (imageFile != null)
             {

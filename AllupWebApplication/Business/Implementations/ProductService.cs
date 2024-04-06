@@ -1,14 +1,14 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using AllupWebApplication.Data;
 using AllupWebApplication.Models;
 using AllupWebApplication.Business.Interfaces;
 using Microsoft.AspNetCore.Http;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
 using System.Threading.Tasks;
 using AllupWebApplication.Helpers.Extensions;
-using AllupWebApplication.Data; // Ensure FileManager is included here.
 
 public class ProductService : IProductService
 {
@@ -24,57 +24,54 @@ public class ProductService : IProductService
     public async Task<IEnumerable<Product>> GetAllProductsAsync(Expression<Func<Product, bool>>? filter = null, params string[] includes)
     {
         IQueryable<Product> query = _context.Products.AsQueryable();
-
-        if (filter != null)
-        {
-            query = query.Where(filter);
-        }
-
-        foreach (var include in includes)
-        {
-            query = query.Include(include);
-        }
-
+        if (filter != null) query = query.Where(filter);
+        foreach (var include in includes ?? new string[] { }) query = query.Include(include);
         return await query.ToListAsync();
-    }
-
-    public async Task<IEnumerable<Product>> GetActiveProductsAsync(Expression<Func<Product, bool>>? filter = null, params string[] includes)
-    {
-        filter = filter == null ? p => p.IsActive : CombineExpressions(p => p.IsActive, filter);
-
-        return await GetAllProductsAsync(filter, includes);
     }
 
     public async Task<Product> GetProductByIdAsync(int id)
     {
-        var product = await _context.Products.Include(p => p.ProductImages).FirstOrDefaultAsync(p => p.Id == id);
-        if (product == null) throw new ArgumentException($"Product with ID {id} not found.");
-        return product;
+        return await _context.Products
+                             .Include(p => p.ProductImages)
+                             .FirstOrDefaultAsync(p => p.Id == id)
+               ?? throw new KeyNotFoundException($"Product with ID {id} not found.");
     }
 
     public async Task CreateProductAsync(Product product, IFormFile? posterImage, IFormFile? hoverImage, IEnumerable<IFormFile>? additionalImages = null)
     {
         if (posterImage != null)
         {
-            var posterImageUrl = await FileManager.SaveFileAsync(posterImage, _webHostEnvironment.WebRootPath, "uploads/products");
-            product.ProductImages.Add(new ProductImage { ImageUrl = posterImageUrl, IsPoster = true });
+            product.ProductImages.Add(new ProductImage
+            {
+                ImageUrl = await FileManager.SaveFileAsync(posterImage, _webHostEnvironment.WebRootPath, "uploads/products"),
+                IsPoster = true
+            });
         }
 
         if (hoverImage != null)
         {
-            var hoverImageUrl = await FileManager.SaveFileAsync(hoverImage, _webHostEnvironment.WebRootPath, "uploads/products");
-            product.ProductImages.Add(new ProductImage { ImageUrl = hoverImageUrl, IsPoster = false });
+            product.ProductImages.Add(new ProductImage
+            {
+                ImageUrl = await FileManager.SaveFileAsync(hoverImage, _webHostEnvironment.WebRootPath, "uploads/products"),
+                IsPoster = false
+            });
         }
 
         if (additionalImages != null)
         {
             foreach (var image in additionalImages)
             {
-                var imageUrl = await image.SaveFileAsync(_webHostEnvironment.WebRootPath, "uploads/products");
-                product.ProductImages.Add(new ProductImage { ImageUrl = imageUrl });
+                product.ProductImages.Add(new ProductImage
+                {
+                    ImageUrl = await FileManager.SaveFileAsync(image, _webHostEnvironment.WebRootPath, "uploads/products"),
+                    IsPoster = null
+                });
             }
         }
+
+        // Set creation date
         product.SetCreatedDate();
+
         await _context.Products.AddAsync(product);
         await _context.SaveChangesAsync();
     }
@@ -82,23 +79,38 @@ public class ProductService : IProductService
     public async Task UpdateProductAsync(Product product, IFormFile? posterImage = null, IFormFile? hoverImage = null, IEnumerable<IFormFile>? additionalImages = null, IEnumerable<int>? imageIdsToDelete = null)
     {
         var existingProduct = await _context.Products.Include(p => p.ProductImages).FirstOrDefaultAsync(p => p.Id == product.Id);
-        if (existingProduct == null) throw new KeyNotFoundException($"Product with ID {product.Id} not found.");
+        if (existingProduct == null) throw new ArgumentException($"Product with ID {product.Id} not found.");
 
-        // Update basic properties
+        // Update product fields here
         existingProduct.Name = product.Name;
         existingProduct.Description = product.Description;
-        // Update additional properties as needed
+        existingProduct.SalePrice = product.SalePrice;
+        existingProduct.CostPrice = product.CostPrice;
+        existingProduct.DiscountPercent = product.DiscountPercent;
+        existingProduct.ProductCode = product.ProductCode;
+        existingProduct.StockCount = product.StockCount;
+        existingProduct.IsActive = product.IsActive;
+        existingProduct.Category = product.Category;
+        existingProduct.IsBestSeller = product.IsBestSeller;
+        existingProduct.IsNew = product.IsNew;
+        existingProduct.IsFeatured = product.IsFeatured;
+        existingProduct.IsAvailable = product.IsAvailable;
+        // Add other fields as necessary
 
-        // Update Poster and Hover Images if provided
+        // Update poster and hover images if provided
         if (posterImage != null)
         {
-            // Assuming existingProduct.ProductImages is initialized
             var existingPoster = existingProduct.ProductImages.FirstOrDefault(img => img.IsPoster == true);
             if (existingPoster != null)
             {
                 FileManager.DeleteFile(_webHostEnvironment.WebRootPath, "uploads/products", existingPoster.ImageUrl);
+                existingProduct.ProductImages.Remove(existingPoster);
             }
-            existingPoster.ImageUrl = await FileManager.SaveFileAsync(posterImage, _webHostEnvironment.WebRootPath, "uploads/products");
+            existingProduct.ProductImages.Add(new ProductImage
+            {
+                ImageUrl = await FileManager.SaveFileAsync(posterImage, _webHostEnvironment.WebRootPath, "uploads/products"),
+                IsPoster = true
+            });
         }
 
         if (hoverImage != null)
@@ -107,8 +119,13 @@ public class ProductService : IProductService
             if (existingHover != null)
             {
                 FileManager.DeleteFile(_webHostEnvironment.WebRootPath, "uploads/products", existingHover.ImageUrl);
+                existingProduct.ProductImages.Remove(existingHover);
             }
-            existingHover.ImageUrl = await FileManager.SaveFileAsync(hoverImage, _webHostEnvironment.WebRootPath, "uploads/products");
+            existingProduct.ProductImages.Add(new ProductImage
+            {
+                ImageUrl = await FileManager.SaveFileAsync(hoverImage, _webHostEnvironment.WebRootPath, "uploads/products"),
+                IsPoster = false
+            });
         }
 
         // Handle additional images
@@ -116,19 +133,22 @@ public class ProductService : IProductService
         {
             foreach (var image in additionalImages)
             {
-                var imageUrl = await image.SaveFileAsync(_webHostEnvironment.WebRootPath, "uploads/products");
-                existingProduct.ProductImages.Add(new ProductImage { ImageUrl = imageUrl });
+                existingProduct.ProductImages.Add(new ProductImage
+                {
+                    ImageUrl = await FileManager.SaveFileAsync(image, _webHostEnvironment.WebRootPath, "uploads/products"),
+                    IsPoster = null
+                });
             }
         }
 
-        // Remove selected images
-        if (imageIdsToDelete != null)
+        // Handle image deletions
+        if (imageIdsToDelete != null && imageIdsToDelete.Any())
         {
-            var imagesToRemove = existingProduct.ProductImages.Where(img => imageIdsToDelete.Contains(img.Id)).ToList();
-            foreach (var image in imagesToRemove)
+            var imagesToDelete = existingProduct.ProductImages.Where(img => imageIdsToDelete.Contains(img.Id)).ToList();
+            foreach (var image in imagesToDelete)
             {
                 FileManager.DeleteFile(_webHostEnvironment.WebRootPath, "uploads/products", image.ImageUrl);
-                _context.ProductImages.Remove(image);
+                existingProduct.ProductImages.Remove(image);
             }
         }
         // Update modified date
@@ -141,30 +161,27 @@ public class ProductService : IProductService
     public async Task SoftDeleteProductAsync(int id)
     {
         var product = await _context.Products.FindAsync(id);
-        if (product == null) throw new KeyNotFoundException($"Product with ID {id} not found.");
-
-        product.IsActive = false;
-        await _context.SaveChangesAsync();
+        if (product != null && product.IsActive == true)
+        {
+            product.IsActive = false;
+            product.UpdateModifiedDate();
+            await _context.SaveChangesAsync();
+        }
     }
 
     public async Task HardDeleteProductAsync(int id)
     {
-        var product = await _context.Products.Include(p => p.ProductImages).FirstOrDefaultAsync(p => p.Id == id);
-        if (product == null) throw new KeyNotFoundException($"Product with ID {id} not found.");
-
-        foreach (var image in product.ProductImages)
+        var product = await _context.Products.FindAsync(id);
+        if (product == null)
         {
-            FileManager.DeleteFile(_webHostEnvironment.WebRootPath, "uploads/products", image.ImageUrl);
+            throw new KeyNotFoundException("Category not found.");
+        }
+        if (product.IsActive)
+        {
+            throw new InvalidOperationException("Cannot hard delete an active category. Please deactivate the category first.");
         }
 
         _context.Products.Remove(product);
         await _context.SaveChangesAsync();
-    }
-
-    // Helper method to combine expressions with AND
-    private static Expression<Func<T, bool>> CombineExpressions<T>(Expression<Func<T, bool>> expr1, Expression<Func<T, bool>> expr2)
-    {
-        var invokedExpr = Expression.Invoke(expr2, expr1.Parameters);
-        return Expression.Lambda<Func<T, bool>>(Expression.AndAlso(expr1.Body, invokedExpr), expr1.Parameters);
     }
 }

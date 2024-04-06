@@ -56,6 +56,7 @@ namespace AllupWebApplication.Business.Implementations
                 existingSlider.Subtitle = slider.Subtitle;
                 existingSlider.ButtonText = slider.ButtonText;
                 existingSlider.ButtonUrl = slider.ButtonUrl;
+                existingSlider.IsActive = slider.IsActive;
 
                 // Handle image update
                 if (imageFile != null)

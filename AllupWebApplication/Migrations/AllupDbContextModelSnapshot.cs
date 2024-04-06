@@ -67,18 +67,17 @@ namespace AllupWebApplication.Migrations
                     b.Property<int>("CategoryId")
                         .HasColumnType("int");
 
-                    b.Property<double>("CostPrice")
+                    b.Property<double?>("CostPrice")
                         .HasColumnType("float");
 
                     b.Property<DateTime>("CreatedDate")
                         .HasColumnType("datetime2");
 
                     b.Property<string>("Description")
-                        .IsRequired()
                         .HasMaxLength(350)
                         .HasColumnType("nvarchar(350)");
 
-                    b.Property<double>("DiscountPercent")
+                    b.Property<double?>("DiscountPercent")
                         .HasColumnType("float");
 
                     b.Property<bool>("IsActive")
@@ -105,13 +104,13 @@ namespace AllupWebApplication.Migrations
                         .HasColumnType("nvarchar(50)");
 
                     b.Property<string>("ProductCode")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
 
-                    b.Property<double>("SalePrice")
+                    b.Property<double?>("SalePrice")
                         .HasColumnType("float");
 
-                    b.Property<int>("StockCount")
+                    b.Property<int?>("StockCount")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
@@ -134,7 +133,8 @@ namespace AllupWebApplication.Migrations
 
                     b.Property<string>("ImageUrl")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(250)
+                        .HasColumnType("nvarchar(250)");
 
                     b.Property<bool>("IsActive")
                         .HasColumnType("bit");
