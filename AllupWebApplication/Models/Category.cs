@@ -22,5 +22,5 @@ public class Category : BaseEntity
     public IFormFile? ImageFile { get; set; }
 
     // Navigation property to Products
-    public virtual ICollection<Product> Products { get; set; } = new List<Product>();
+    public virtual ICollection<Product>? Products { get; set; } = new List<Product>();
 }

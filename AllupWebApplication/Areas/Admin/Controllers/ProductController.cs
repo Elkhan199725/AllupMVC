@@ -126,4 +126,6 @@ public class ProductController : Controller
         await _productService.HardDeleteProductAsync(id);
         return RedirectToAction(nameof(Index), new { area = "Admin" });
     }
+
+
 }
