@@ -78,6 +78,7 @@ public class ProductService : IProductService
             });
         }
 
+
         // Handle additional images
         if (additionalImages != null)
         {
