@@ -5,6 +5,7 @@ namespace AllupWebApplication.ViewModels;
 
 public class HomeViewModel
 {
-    public List<SliderItem> SliderItems { get; set; }
-
+    public IEnumerable<SliderItem> SliderItems { get; set; }
+    public IEnumerable<Category> Categories { get; set; }
+    public IEnumerable<Product> Products { get; set; }
 }

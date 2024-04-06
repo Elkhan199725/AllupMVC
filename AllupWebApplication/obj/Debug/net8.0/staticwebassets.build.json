@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "asciMxzd9kLPe1KNfDcnJVX4+0E3Enl3MQsH5V5D1HQ=",
+  "Hash": "E96JKt7wFTpS3OJWerdvshO62JISMFAFPy+vrMWbaxw=",
   "Source": "AllupWebApplication",
   "BasePath": "_content/AllupWebApplication",
   "Mode": "Default",
@@ -39404,6 +39404,25 @@
       "OriginalItemSpec": "wwwroot\\uploads\\products\\05e0024d-f74e-4f8a-99d2-43cb5e39e49c_71ezgzuaWhL._AC_UF894,1000_QL80_.jpg"
     },
     {
+      "Identity": "C:\\Users\\elkhantma\\Desktop\\AllupMVC\\AllupWebApplication\\wwwroot\\uploads\\products\\062a5398-edd4-4c80-a992-0dbb0db415a3_1660s.jpeg",
+      "SourceId": "AllupWebApplication",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\elkhantma\\Desktop\\AllupMVC\\AllupWebApplication\\wwwroot\\",
+      "BasePath": "_content/AllupWebApplication",
+      "RelativePath": "uploads/products/062a5398-edd4-4c80-a992-0dbb0db415a3_1660s.jpeg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\products\\062a5398-edd4-4c80-a992-0dbb0db415a3_1660s.jpeg"
+    },
+    {
       "Identity": "C:\\Users\\elkhantma\\Desktop\\AllupMVC\\AllupWebApplication\\wwwroot\\uploads\\products\\0abf9ef4-3fe6-4f92-9a69-9c04b0e04fea_1660sRoque.jpeg",
       "SourceId": "AllupWebApplication",
       "SourceType": "Discovered",
@@ -39613,25 +39632,6 @@
       "OriginalItemSpec": "wwwroot\\uploads\\products\\32be1165-56a9-4965-bcf2-c13436877df8_MV5BMTQwMDA1NzI4OV5BMl5BanBnXkFtZTcwNzM4MjM3NA@@._V1_.jpg"
     },
     {
-      "Identity": "C:\\Users\\elkhantma\\Desktop\\AllupMVC\\AllupWebApplication\\wwwroot\\uploads\\products\\3e519bb5-5ff7-4827-a4e9-f7ee27dc4b1e_1660sRoque.jpeg",
-      "SourceId": "AllupWebApplication",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\elkhantma\\Desktop\\AllupMVC\\AllupWebApplication\\wwwroot\\",
-      "BasePath": "_content/AllupWebApplication",
-      "RelativePath": "uploads/products/3e519bb5-5ff7-4827-a4e9-f7ee27dc4b1e_1660sRoque.jpeg",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\uploads\\products\\3e519bb5-5ff7-4827-a4e9-f7ee27dc4b1e_1660sRoque.jpeg"
-    },
-    {
       "Identity": "C:\\Users\\elkhantma\\Desktop\\AllupMVC\\AllupWebApplication\\wwwroot\\uploads\\products\\3e65c164-ccc8-4d92-9bbe-930864501c0c_stigmata-front.jpeg",
       "SourceId": "AllupWebApplication",
       "SourceType": "Discovered",
@@ -39670,6 +39670,25 @@
       "OriginalItemSpec": "wwwroot\\uploads\\products\\3eac5d36-8549-435c-87a9-69d4ef595183_9c5fb0df9680dd71e29a672e3f054262.jpeg"
     },
     {
+      "Identity": "C:\\Users\\elkhantma\\Desktop\\AllupMVC\\AllupWebApplication\\wwwroot\\uploads\\products\\43c68586-ff23-42e8-9584-1173da459ccd_1660sRoque.jpeg",
+      "SourceId": "AllupWebApplication",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\elkhantma\\Desktop\\AllupMVC\\AllupWebApplication\\wwwroot\\",
+      "BasePath": "_content/AllupWebApplication",
+      "RelativePath": "uploads/products/43c68586-ff23-42e8-9584-1173da459ccd_1660sRoque.jpeg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\products\\43c68586-ff23-42e8-9584-1173da459ccd_1660sRoque.jpeg"
+    },
+    {
       "Identity": "C:\\Users\\elkhantma\\Desktop\\AllupMVC\\AllupWebApplication\\wwwroot\\uploads\\products\\4418eed7-253c-4493-84ce-f02b2a44cd48_stigmata-front.jpeg",
       "SourceId": "AllupWebApplication",
       "SourceType": "Discovered",
@@ -39687,6 +39706,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\uploads\\products\\4418eed7-253c-4493-84ce-f02b2a44cd48_stigmata-front.jpeg"
+    },
+    {
+      "Identity": "C:\\Users\\elkhantma\\Desktop\\AllupMVC\\AllupWebApplication\\wwwroot\\uploads\\products\\46f4cd3c-a634-4da1-be6d-addb096b4789_1660sRoque.jpeg",
+      "SourceId": "AllupWebApplication",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\elkhantma\\Desktop\\AllupMVC\\AllupWebApplication\\wwwroot\\",
+      "BasePath": "_content/AllupWebApplication",
+      "RelativePath": "uploads/products/46f4cd3c-a634-4da1-be6d-addb096b4789_1660sRoque.jpeg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\products\\46f4cd3c-a634-4da1-be6d-addb096b4789_1660sRoque.jpeg"
     },
     {
       "Identity": "C:\\Users\\elkhantma\\Desktop\\AllupMVC\\AllupWebApplication\\wwwroot\\uploads\\products\\4a8d2d98-c1c2-4dd5-93e3-259003dae2b6_tech.jpeg",
@@ -40029,25 +40067,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\uploads\\products\\93b15ea9-87dc-4689-941e-292d4c1c41ab_MV5BMTQwMDA1NzI4OV5BMl5BanBnXkFtZTcwNzM4MjM3NA@@._V1_.jpg"
-    },
-    {
-      "Identity": "C:\\Users\\elkhantma\\Desktop\\AllupMVC\\AllupWebApplication\\wwwroot\\uploads\\products\\9886b52b-93fd-4ea4-afc3-0e84b5abe9f0_1660s.jpeg",
-      "SourceId": "AllupWebApplication",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\elkhantma\\Desktop\\AllupMVC\\AllupWebApplication\\wwwroot\\",
-      "BasePath": "_content/AllupWebApplication",
-      "RelativePath": "uploads/products/9886b52b-93fd-4ea4-afc3-0e84b5abe9f0_1660s.jpeg",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\uploads\\products\\9886b52b-93fd-4ea4-afc3-0e84b5abe9f0_1660s.jpeg"
     },
     {
       "Identity": "C:\\Users\\elkhantma\\Desktop\\AllupMVC\\AllupWebApplication\\wwwroot\\uploads\\products\\9e5c26d5-b428-4f50-b656-139a32355dff_MV5BMTQwMDA1NzI4OV5BMl5BanBnXkFtZTcwNzM4MjM3NA@@._V1_.jpg",
@@ -40468,6 +40487,25 @@
       "OriginalItemSpec": "wwwroot\\uploads\\sliders\\4a5748ad-436d-4183-a7d9-4ad7b84c2e21_1660sRoque.jpeg"
     },
     {
+      "Identity": "C:\\Users\\elkhantma\\Desktop\\AllupMVC\\AllupWebApplication\\wwwroot\\uploads\\sliders\\7d772334-0a4f-418d-a63b-b0ab8701be41_slider-5.jpg",
+      "SourceId": "AllupWebApplication",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\elkhantma\\Desktop\\AllupMVC\\AllupWebApplication\\wwwroot\\",
+      "BasePath": "_content/AllupWebApplication",
+      "RelativePath": "uploads/sliders/7d772334-0a4f-418d-a63b-b0ab8701be41_slider-5.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\sliders\\7d772334-0a4f-418d-a63b-b0ab8701be41_slider-5.jpg"
+    },
+    {
       "Identity": "C:\\Users\\elkhantma\\Desktop\\AllupMVC\\AllupWebApplication\\wwwroot\\uploads\\sliders\\8ac2e656-0221-449f-9367-71fb050dcba6_71ezgzuaWhL._AC_UF894,1000_QL80_.jpg",
       "SourceId": "AllupWebApplication",
       "SourceType": "Discovered",
@@ -40506,12 +40544,12 @@
       "OriginalItemSpec": "wwwroot\\uploads\\sliders\\b831a2be-ee6a-4c61-817d-383b29793d74_9c5fb0df9680dd71e29a672e3f054262.jpeg"
     },
     {
-      "Identity": "C:\\Users\\elkhantma\\Desktop\\AllupMVC\\AllupWebApplication\\wwwroot\\uploads\\sliders\\e7f8b66f-866d-487f-92b2-4ab140ce87c0_1660sRoque.jpeg",
+      "Identity": "C:\\Users\\elkhantma\\Desktop\\AllupMVC\\AllupWebApplication\\wwwroot\\uploads\\sliders\\c738a762-e557-4a6f-90f3-a92310ee4628_slider-6.jpg",
       "SourceId": "AllupWebApplication",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\elkhantma\\Desktop\\AllupMVC\\AllupWebApplication\\wwwroot\\",
       "BasePath": "_content/AllupWebApplication",
-      "RelativePath": "uploads/sliders/e7f8b66f-866d-487f-92b2-4ab140ce87c0_1660sRoque.jpeg",
+      "RelativePath": "uploads/sliders/c738a762-e557-4a6f-90f3-a92310ee4628_slider-6.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -40522,7 +40560,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\uploads\\sliders\\e7f8b66f-866d-487f-92b2-4ab140ce87c0_1660sRoque.jpeg"
+      "OriginalItemSpec": "wwwroot\\uploads\\sliders\\c738a762-e557-4a6f-90f3-a92310ee4628_slider-6.jpg"
     }
   ]
 }
