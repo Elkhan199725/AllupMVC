@@ -26,10 +26,6 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\Elkhan Mammadli\Desktop\AllupMVC\AllupWebApplication
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/Elkhan Mammadli/Desktop/AllupMVC/AllupWebApplication/Areas/Admin/Views/Auth/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQXV0aFxJbmRleC5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
 [C:/Users/Elkhan Mammadli/Desktop/AllupMVC/AllupWebApplication/Areas/Admin/Views/Auth/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQXV0aFxMb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -108,6 +104,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/Elkhan Mammadli/Desktop/AllupMVC/AllupWebApplication/Areas/Admin/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Elkhan Mammadli/Desktop/AllupMVC/AllupWebApplication/Views/Account/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxMb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Elkhan Mammadli/Desktop/AllupMVC/AllupWebApplication/Views/Account/Register.cshtml]
