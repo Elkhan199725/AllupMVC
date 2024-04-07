@@ -1,6 +1,8 @@
 using AllupMVC;
 using AllupWebApplication;
 using AllupWebApplication.Data;
+using AllupWebApplication.Models;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -16,6 +18,20 @@ builder.Services.AddDbContext<AllupDbContext>(options =>
 
 // Method extension to encapsulate service registrations
 builder.Services.AddServices();
+
+builder.Services.
+    AddIdentity<AppUser,IdentityRole>(option=>
+    {
+        option.Password.RequiredLength = 8;
+        option.Password.RequireNonAlphanumeric = true;
+        option.Password.RequireUppercase = true;
+        option.Password.RequireLowercase = true;
+        option.Password.RequireDigit = true;
+
+        option.User.RequireUniqueEmail = false;
+    }).
+    AddEntityFrameworkStores<AllupDbContext>().
+    AddDefaultTokenProviders();
 
 var app = builder.Build();
 

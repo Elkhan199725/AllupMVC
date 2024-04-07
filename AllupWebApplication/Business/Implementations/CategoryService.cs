@@ -36,7 +36,7 @@ public class CategoryService : ICategoryService
         query = _getIncludes(query, includes);
 
         if (filter != null)
-        {
+        {   
             query = query.Where(filter);
         }
 
