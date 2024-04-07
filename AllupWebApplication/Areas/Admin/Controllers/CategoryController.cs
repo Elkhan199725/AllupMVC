@@ -3,22 +3,34 @@ using AllupWebApplication.Business.Interfaces;
 using AllupWebApplication.Models;
 using Microsoft.AspNetCore.Http;
 using AllupWebApplication.Business.Implementations;
+using AllupWebApplication.Data;
+using Microsoft.AspNetCore.Hosting;
+using AllupWebApplication.Helpers.Extensions;
 
 namespace AllupWebApplication.Controllers;
 [Area("Admin")]
 public class CategoryController : Controller
 {
     private readonly ICategoryService _categoryService;
-
-    public CategoryController(ICategoryService categoryService)
+    private readonly IWebHostEnvironment _webHostEnvironment;
+    private readonly AllupDbContext _context;
+    public CategoryController(ICategoryService categoryService, IWebHostEnvironment webHostEnvironment, AllupDbContext context)
     {
         _categoryService = categoryService;
+        _webHostEnvironment = webHostEnvironment;
+        _context = context;
     }
 
-    public async Task<IActionResult> Index()
+    public async Task<IActionResult> Index(int? pageNumber)
     {
-        var categories = await _categoryService.GetAllCategoriesAsync();
-        return View(categories);
+        const int pageSize = 10; // Set the number of items you want per page
+        var query = _context.Categories.AsQueryable(); // Assuming _context is your DbContext and Categories is your DbSet
+
+        // Include any related data if needed
+        // query = query.Include(c => ...);
+
+        var paginatedData = await PaginatedList<Category>.CreateAsync(query, pageNumber ?? 1, pageSize);
+        return View(paginatedData);
     }
 
     public IActionResult Create()

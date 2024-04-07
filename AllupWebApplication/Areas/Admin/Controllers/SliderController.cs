@@ -4,6 +4,9 @@ using AllupWebApplication.Models;
 using Microsoft.AspNetCore.Http;
 using System;
 using System.Threading.Tasks;
+using AllupWebApplication.Data;
+using Microsoft.AspNetCore.Hosting;
+using AllupWebApplication.Helpers.Extensions;
 
 namespace AllupWebApplication.Controllers
 {
@@ -11,18 +14,29 @@ namespace AllupWebApplication.Controllers
     public class SliderController : Controller
     {
         private readonly ISliderService _sliderService;
+        private readonly IWebHostEnvironment _webHostEnvironment;
+        private readonly AllupDbContext _context;
 
-        public SliderController(ISliderService sliderService)
+        public SliderController(ISliderService sliderService, IWebHostEnvironment webHostEnvironment, AllupDbContext context)
         {
             _sliderService = sliderService;
+            _webHostEnvironment = webHostEnvironment;
+            _context = context;
         }
 
         // Display the list of sliders
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(int? pageNumber)
         {
-            var sliders = await _sliderService.GetAllSlidersAsync();
-            return View(sliders);
+            const int pageSize = 10; // The number of items per page
+            var query = _context.SliderItems.AsQueryable(); // Assuming _context is your DbContext and Sliders is your DbSet
+
+            // If you have related data to include, do it here
+            // query = query.Include(s => ...);
+
+            var paginatedData = await PaginatedList<SliderItem>.CreateAsync(query, pageNumber ?? 1, pageSize);
+            return View(paginatedData);
         }
+
 
         // Show the form to create a new slider
         public IActionResult Create()

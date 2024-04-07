@@ -5,6 +5,9 @@ using Microsoft.AspNetCore.Http;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using AllupWebApplication.Business.Implementations;
+using AllupWebApplication.Data;
+using AllupWebApplication.Helpers.Extensions;
+using Microsoft.EntityFrameworkCore;
 
 namespace AllupWebApplication.Controllers;
 
@@ -14,20 +17,34 @@ public class ProductController : Controller
     private readonly IProductService _productService;
     private readonly ICategoryService _categoryService;
     private readonly IWebHostEnvironment _webHostEnvironment;
+    private readonly AllupDbContext _context;
 
-    public ProductController(IProductService productService, ICategoryService categoryService, IWebHostEnvironment webHostEnvironment)
+    public ProductController(IProductService productService, ICategoryService categoryService, IWebHostEnvironment webHostEnvironment, AllupDbContext context)
     {
         _productService = productService;
         _categoryService = categoryService;
         _webHostEnvironment = webHostEnvironment;
+        _context = context;
     }
 
-    public async Task<IActionResult> Index()
+    //public async Task<IActionResult> Index()
+    //{
+    //    // Including related Category and ProductImages entities
+    //    var products = await _productService.GetAllProductsAsync(null, "Category", "ProductImages");
+    //    return View(products);
+    //}
+    public async Task<IActionResult> Index(int? pageNumber)
     {
-        // Including related Category and ProductImages entities
-        var products = await _productService.GetAllProductsAsync(null, "Category", "ProductImages");
-        return View(products);
+        const int pageSize = 10; // Set your page size, which is the number of items per page
+        var query = _context.Products.AsQueryable(); // Or whatever your queryable source is
+
+        // Include related data as needed
+        query = query.Include(p => p.Category).Include(p => p.ProductImages);
+
+        var paginatedData = await PaginatedList<Product>.CreateAsync(query, pageNumber ?? 1, pageSize);
+        return View(paginatedData);
     }
+
 
     public async Task<IActionResult> Create()
     {
