@@ -55,6 +55,7 @@ app.UseStaticFiles();
 app.UseRouting();
 
 // Enable authentication/authorization middleware
+app.UseAuthentication();
 app.UseAuthorization();
 
 // Define routing for areas

@@ -8,10 +8,12 @@ using AllupWebApplication.Business.Implementations;
 using AllupWebApplication.Data;
 using AllupWebApplication.Helpers.Extensions;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Authorization;
 
 namespace AllupWebApplication.Controllers;
 
 [Area("Admin")]
+[Authorize(Roles = "SuperAdmin")]
 public class ProductController : Controller
 {
     private readonly IProductService _productService;

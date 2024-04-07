@@ -6,9 +6,11 @@ using AllupWebApplication.Business.Implementations;
 using AllupWebApplication.Data;
 using Microsoft.AspNetCore.Hosting;
 using AllupWebApplication.Helpers.Extensions;
+using Microsoft.AspNetCore.Authorization;
 
 namespace AllupWebApplication.Controllers;
 [Area("Admin")]
+[Authorize(Roles = "SuperAdmin")]
 public class CategoryController : Controller
 {
     private readonly ICategoryService _categoryService;
