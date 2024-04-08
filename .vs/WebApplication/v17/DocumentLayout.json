@@ -3,23 +3,51 @@
   "WorkspaceRootPath": "C:\\Users\\Elkhan Mammadli\\Desktop\\AllupMVC\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{DE91E26C-FB05-40AA-9BD0-A8667F482DCB}|AllupWebApplication\\AllupWebApplication.csproj|c:\\users\\elkhan mammadli\\desktop\\allupmvc\\allupwebapplication\\areas\\admin\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{DE91E26C-FB05-40AA-9BD0-A8667F482DCB}|AllupWebApplication\\AllupWebApplication.csproj|c:\\users\\elkhan mammadli\\desktop\\allupmvc\\allupwebapplication\\views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DE91E26C-FB05-40AA-9BD0-A8667F482DCB}|AllupWebApplication\\AllupWebApplication.csproj|solutionrelative:allupwebapplication\\views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DE91E26C-FB05-40AA-9BD0-A8667F482DCB}|AllupWebApplication\\AllupWebApplication.csproj|c:\\users\\elkhan mammadli\\desktop\\allupmvc\\allupwebapplication\\views\\shared\\components\\header\\default.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DE91E26C-FB05-40AA-9BD0-A8667F482DCB}|AllupWebApplication\\AllupWebApplication.csproj|solutionrelative:allupwebapplication\\views\\shared\\components\\header\\default.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DE91E26C-FB05-40AA-9BD0-A8667F482DCB}|AllupWebApplication\\AllupWebApplication.csproj|C:\\Users\\Elkhan Mammadli\\Desktop\\AllupMVC\\allupwebapplication\\viewcomponents\\headerviewcomponent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DE91E26C-FB05-40AA-9BD0-A8667F482DCB}|AllupWebApplication\\AllupWebApplication.csproj|solutionrelative:allupwebapplication\\viewcomponents\\headerviewcomponent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DE91E26C-FB05-40AA-9BD0-A8667F482DCB}|AllupWebApplication\\AllupWebApplication.csproj|c:\\users\\elkhan mammadli\\desktop\\allupmvc\\allupwebapplication\\business\\implementations\\productservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DE91E26C-FB05-40AA-9BD0-A8667F482DCB}|AllupWebApplication\\AllupWebApplication.csproj|solutionrelative:allupwebapplication\\business\\implementations\\productservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DE91E26C-FB05-40AA-9BD0-A8667F482DCB}|AllupWebApplication\\AllupWebApplication.csproj|c:\\users\\elkhan mammadli\\desktop\\allupmvc\\allupwebapplication\\areas\\admin\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DE91E26C-FB05-40AA-9BD0-A8667F482DCB}|AllupWebApplication\\AllupWebApplication.csproj|solutionrelative:allupwebapplication\\areas\\admin\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DE91E26C-FB05-40AA-9BD0-A8667F482DCB}|AllupWebApplication\\AllupWebApplication.csproj|c:\\users\\elkhan mammadli\\desktop\\allupmvc\\allupwebapplication\\areas\\admin\\views\\product\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DE91E26C-FB05-40AA-9BD0-A8667F482DCB}|AllupWebApplication\\AllupWebApplication.csproj|solutionrelative:allupwebapplication\\areas\\admin\\views\\product\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DE91E26C-FB05-40AA-9BD0-A8667F482DCB}|AllupWebApplication\\AllupWebApplication.csproj|c:\\users\\elkhan mammadli\\desktop\\allupmvc\\allupwebapplication\\areas\\admin\\views\\product\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DE91E26C-FB05-40AA-9BD0-A8667F482DCB}|AllupWebApplication\\AllupWebApplication.csproj|solutionrelative:allupwebapplication\\areas\\admin\\views\\product\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DE91E26C-FB05-40AA-9BD0-A8667F482DCB}|AllupWebApplication\\AllupWebApplication.csproj|C:\\Users\\Elkhan Mammadli\\Desktop\\AllupMVC\\allupwebapplication\\areas\\admin\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{DE91E26C-FB05-40AA-9BD0-A8667F482DCB}|AllupWebApplication\\AllupWebApplication.csproj|solutionrelative:allupwebapplication\\areas\\admin\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DE91E26C-FB05-40AA-9BD0-A8667F482DCB}|AllupWebApplication\\AllupWebApplication.csproj|c:\\users\\elkhan mammadli\\desktop\\allupmvc\\allupwebapplication\\areas\\admin\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{DE91E26C-FB05-40AA-9BD0-A8667F482DCB}|AllupWebApplication\\AllupWebApplication.csproj|C:\\Users\\Elkhan Mammadli\\Desktop\\AllupMVC\\allupwebapplication\\areas\\admin\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DE91E26C-FB05-40AA-9BD0-A8667F482DCB}|AllupWebApplication\\AllupWebApplication.csproj|solutionrelative:allupwebapplication\\areas\\admin\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DE91E26C-FB05-40AA-9BD0-A8667F482DCB}|AllupWebApplication\\AllupWebApplication.csproj|c:\\users\\elkhan mammadli\\desktop\\allupmvc\\allupwebapplication\\serviceregistration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{DE91E26C-FB05-40AA-9BD0-A8667F482DCB}|AllupWebApplication\\AllupWebApplication.csproj|C:\\Users\\Elkhan Mammadli\\Desktop\\AllupMVC\\allupwebapplication\\serviceregistration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DE91E26C-FB05-40AA-9BD0-A8667F482DCB}|AllupWebApplication\\AllupWebApplication.csproj|solutionrelative:allupwebapplication\\serviceregistration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DE91E26C-FB05-40AA-9BD0-A8667F482DCB}|AllupWebApplication\\AllupWebApplication.csproj|c:\\users\\elkhan mammadli\\desktop\\allupmvc\\allupwebapplication\\areas\\admin\\views\\auth\\resetpassword.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{DE91E26C-FB05-40AA-9BD0-A8667F482DCB}|AllupWebApplication\\AllupWebApplication.csproj|C:\\Users\\Elkhan Mammadli\\Desktop\\AllupMVC\\allupwebapplication\\areas\\admin\\views\\auth\\resetpassword.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{DE91E26C-FB05-40AA-9BD0-A8667F482DCB}|AllupWebApplication\\AllupWebApplication.csproj|solutionrelative:allupwebapplication\\areas\\admin\\views\\auth\\resetpassword.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DE91E26C-FB05-40AA-9BD0-A8667F482DCB}|AllupWebApplication\\AllupWebApplication.csproj|c:\\users\\elkhan mammadli\\desktop\\allupmvc\\allupwebapplication\\areas\\admin\\views\\auth\\forgotpassword.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{DE91E26C-FB05-40AA-9BD0-A8667F482DCB}|AllupWebApplication\\AllupWebApplication.csproj|C:\\Users\\Elkhan Mammadli\\Desktop\\AllupMVC\\allupwebapplication\\areas\\admin\\views\\auth\\forgotpassword.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{DE91E26C-FB05-40AA-9BD0-A8667F482DCB}|AllupWebApplication\\AllupWebApplication.csproj|solutionrelative:allupwebapplication\\areas\\admin\\views\\auth\\forgotpassword.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
@@ -27,11 +55,11 @@
       "RelativeMoniker": "D:0:0:{DE91E26C-FB05-40AA-9BD0-A8667F482DCB}|AllupWebApplication\\AllupWebApplication.csproj|solutionrelative:allupwebapplication\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DE91E26C-FB05-40AA-9BD0-A8667F482DCB}|AllupWebApplication\\AllupWebApplication.csproj|c:\\users\\elkhan mammadli\\desktop\\allupmvc\\allupwebapplication\\viewmodels\\userloginviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{DE91E26C-FB05-40AA-9BD0-A8667F482DCB}|AllupWebApplication\\AllupWebApplication.csproj|C:\\Users\\Elkhan Mammadli\\Desktop\\AllupMVC\\allupwebapplication\\viewmodels\\userloginviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DE91E26C-FB05-40AA-9BD0-A8667F482DCB}|AllupWebApplication\\AllupWebApplication.csproj|solutionrelative:allupwebapplication\\viewmodels\\userloginviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DE91E26C-FB05-40AA-9BD0-A8667F482DCB}|AllupWebApplication\\AllupWebApplication.csproj|c:\\users\\elkhan mammadli\\desktop\\allupmvc\\allupwebapplication\\areas\\admin\\views\\auth\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{DE91E26C-FB05-40AA-9BD0-A8667F482DCB}|AllupWebApplication\\AllupWebApplication.csproj|C:\\Users\\Elkhan Mammadli\\Desktop\\AllupMVC\\allupwebapplication\\areas\\admin\\views\\auth\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{DE91E26C-FB05-40AA-9BD0-A8667F482DCB}|AllupWebApplication\\AllupWebApplication.csproj|solutionrelative:allupwebapplication\\areas\\admin\\views\\auth\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
@@ -47,14 +75,66 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "_Layout.cshtml",
-              "DocumentMoniker": "C:\\Users\\Elkhan Mammadli\\Desktop\\AllupMVC\\AllupWebApplication\\Areas\\Admin\\Views\\Shared\\_Layout.cshtml",
-              "RelativeDocumentMoniker": "AllupWebApplication\\Areas\\Admin\\Views\\Shared\\_Layout.cshtml",
-              "ToolTip": "C:\\Users\\Elkhan Mammadli\\Desktop\\AllupMVC\\AllupWebApplication\\Areas\\Admin\\Views\\Shared\\_Layout.cshtml",
-              "RelativeToolTip": "AllupWebApplication\\Areas\\Admin\\Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAEcAAAAaAAAA",
+              "Title": "Login.cshtml",
+              "DocumentMoniker": "C:\\Users\\Elkhan Mammadli\\Desktop\\AllupMVC\\AllupWebApplication\\Views\\Account\\Login.cshtml",
+              "RelativeDocumentMoniker": "AllupWebApplication\\Views\\Account\\Login.cshtml",
+              "ToolTip": "C:\\Users\\Elkhan Mammadli\\Desktop\\AllupMVC\\AllupWebApplication\\Views\\Account\\Login.cshtml",
+              "RelativeToolTip": "AllupWebApplication\\Views\\Account\\Login.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAlAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-04-08T03:09:04.796Z",
+              "WhenOpened": "2024-04-08T08:00:35.908Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Default.cshtml",
+              "DocumentMoniker": "C:\\Users\\Elkhan Mammadli\\Desktop\\AllupMVC\\AllupWebApplication\\Views\\Shared\\Components\\Header\\Default.cshtml",
+              "RelativeDocumentMoniker": "AllupWebApplication\\Views\\Shared\\Components\\Header\\Default.cshtml",
+              "ToolTip": "C:\\Users\\Elkhan Mammadli\\Desktop\\AllupMVC\\AllupWebApplication\\Views\\Shared\\Components\\Header\\Default.cshtml",
+              "RelativeToolTip": "AllupWebApplication\\Views\\Shared\\Components\\Header\\Default.cshtml",
+              "ViewState": "AQIAAOUBAAAAAAAAAAAAAOoBAABHAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-04-08T07:55:10.543Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ProductService.cs",
+              "DocumentMoniker": "C:\\Users\\Elkhan Mammadli\\Desktop\\AllupMVC\\AllupWebApplication\\Business\\Implementations\\ProductService.cs",
+              "RelativeDocumentMoniker": "AllupWebApplication\\Business\\Implementations\\ProductService.cs",
+              "ToolTip": "C:\\Users\\Elkhan Mammadli\\Desktop\\AllupMVC\\AllupWebApplication\\Business\\Implementations\\ProductService.cs",
+              "RelativeToolTip": "AllupWebApplication\\Business\\Implementations\\ProductService.cs",
+              "ViewState": "AQIAAGIAAAAAAAAAAAAIwGcAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-08T07:49:26.909Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\Elkhan Mammadli\\Desktop\\AllupMVC\\AllupWebApplication\\Areas\\Admin\\Views\\Product\\Create.cshtml",
+              "RelativeDocumentMoniker": "AllupWebApplication\\Areas\\Admin\\Views\\Product\\Create.cshtml",
+              "ToolTip": "C:\\Users\\Elkhan Mammadli\\Desktop\\AllupMVC\\AllupWebApplication\\Areas\\Admin\\Views\\Product\\Create.cshtml",
+              "RelativeToolTip": "AllupWebApplication\\Areas\\Admin\\Views\\Product\\Create.cshtml",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAABcAAAA/AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-04-08T07:46:22.28Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ProductController.cs",
+              "DocumentMoniker": "C:\\Users\\Elkhan Mammadli\\Desktop\\AllupMVC\\AllupWebApplication\\Areas\\Admin\\Controllers\\ProductController.cs",
+              "RelativeDocumentMoniker": "AllupWebApplication\\Areas\\Admin\\Controllers\\ProductController.cs",
+              "ToolTip": "C:\\Users\\Elkhan Mammadli\\Desktop\\AllupMVC\\AllupWebApplication\\Areas\\Admin\\Controllers\\ProductController.cs",
+              "RelativeToolTip": "AllupWebApplication\\Areas\\Admin\\Controllers\\ProductController.cs",
+              "ViewState": "AQIAADUAAAAAAAAAAAAwwDoAAAAnAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-08T07:45:46.358Z",
               "EditorCaption": ""
             },
             {
@@ -75,7 +155,46 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "C:\\Users\\Elkhan Mammadli\\Desktop\\AllupMVC\\AllupWebApplication\\Areas\\Admin\\Views\\Product\\Edit.cshtml",
+              "RelativeDocumentMoniker": "AllupWebApplication\\Areas\\Admin\\Views\\Product\\Edit.cshtml",
+              "ToolTip": "C:\\Users\\Elkhan Mammadli\\Desktop\\AllupMVC\\AllupWebApplication\\Areas\\Admin\\Views\\Product\\Edit.cshtml",
+              "RelativeToolTip": "AllupWebApplication\\Areas\\Admin\\Views\\Product\\Edit.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAAgAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-04-08T07:45:55.435Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "HeaderViewComponent.cs",
+              "DocumentMoniker": "C:\\Users\\Elkhan Mammadli\\Desktop\\AllupMVC\\AllupWebApplication\\ViewComponents\\HeaderViewComponent.cs",
+              "RelativeDocumentMoniker": "AllupWebApplication\\ViewComponents\\HeaderViewComponent.cs",
+              "ToolTip": "C:\\Users\\Elkhan Mammadli\\Desktop\\AllupMVC\\AllupWebApplication\\ViewComponents\\HeaderViewComponent.cs",
+              "RelativeToolTip": "AllupWebApplication\\ViewComponents\\HeaderViewComponent.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAABIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-08T06:39:08.128Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\Elkhan Mammadli\\Desktop\\AllupMVC\\AllupWebApplication\\Areas\\Admin\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "AllupWebApplication\\Areas\\Admin\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\Elkhan Mammadli\\Desktop\\AllupMVC\\AllupWebApplication\\Areas\\Admin\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "AllupWebApplication\\Areas\\Admin\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AQIAABoAAAAAAAAAAAAAABoAAAAZAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-04-08T03:09:04.796Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
               "Title": "ResetPassword.cshtml",
               "DocumentMoniker": "C:\\Users\\Elkhan Mammadli\\Desktop\\AllupMVC\\AllupWebApplication\\Areas\\Admin\\Views\\Auth\\ResetPassword.cshtml",
               "RelativeDocumentMoniker": "AllupWebApplication\\Areas\\Admin\\Views\\Auth\\ResetPassword.cshtml",
@@ -83,12 +202,11 @@
               "RelativeToolTip": "AllupWebApplication\\Areas\\Admin\\Views\\Auth\\ResetPassword.cshtml",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-04-08T02:49:41.264Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-08T02:49:41.264Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 11,
               "Title": "ForgotPassword.cshtml",
               "DocumentMoniker": "C:\\Users\\Elkhan Mammadli\\Desktop\\AllupMVC\\AllupWebApplication\\Areas\\Admin\\Views\\Auth\\ForgotPassword.cshtml",
               "RelativeDocumentMoniker": "AllupWebApplication\\Areas\\Admin\\Views\\Auth\\ForgotPassword.cshtml",
@@ -96,12 +214,11 @@
               "RelativeToolTip": "AllupWebApplication\\Areas\\Admin\\Views\\Auth\\ForgotPassword.cshtml",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-04-08T02:10:52.141Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-08T02:10:52.141Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 8,
               "Title": "AuthController.cs",
               "DocumentMoniker": "C:\\Users\\Elkhan Mammadli\\Desktop\\AllupMVC\\AllupWebApplication\\Areas\\Admin\\Controllers\\AuthController.cs",
               "RelativeDocumentMoniker": "AllupWebApplication\\Areas\\Admin\\Controllers\\AuthController.cs",
@@ -109,12 +226,11 @@
               "RelativeToolTip": "AllupWebApplication\\Areas\\Admin\\Controllers\\AuthController.cs",
               "ViewState": "AQIAAEEAAAAAAAAAAAA3wFYAAAAMAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-08T02:03:19.957Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-08T02:03:19.957Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 14,
               "Title": "Login.cshtml",
               "DocumentMoniker": "C:\\Users\\Elkhan Mammadli\\Desktop\\AllupMVC\\AllupWebApplication\\Areas\\Admin\\Views\\Auth\\Login.cshtml",
               "RelativeDocumentMoniker": "AllupWebApplication\\Areas\\Admin\\Views\\Auth\\Login.cshtml",
@@ -122,12 +238,11 @@
               "RelativeToolTip": "AllupWebApplication\\Areas\\Admin\\Views\\Auth\\Login.cshtml",
               "ViewState": "AQIAADYAAAAAAAAAAAAAAEsAAABTAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-04-08T02:03:23.839Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-08T02:03:23.839Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 9,
               "Title": "ServiceRegistration.cs",
               "DocumentMoniker": "C:\\Users\\Elkhan Mammadli\\Desktop\\AllupMVC\\AllupWebApplication\\ServiceRegistration.cs",
               "RelativeDocumentMoniker": "AllupWebApplication\\ServiceRegistration.cs",
@@ -135,12 +250,11 @@
               "RelativeToolTip": "AllupWebApplication\\ServiceRegistration.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-08T02:00:52.706Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-08T02:00:52.706Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 13,
               "Title": "UserLoginViewModel.cs",
               "DocumentMoniker": "C:\\Users\\Elkhan Mammadli\\Desktop\\AllupMVC\\AllupWebApplication\\ViewModels\\UserLoginViewModel.cs",
               "RelativeDocumentMoniker": "AllupWebApplication\\ViewModels\\UserLoginViewModel.cs",
@@ -148,12 +262,11 @@
               "RelativeToolTip": "AllupWebApplication\\ViewModels\\UserLoginViewModel.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-07T12:21:46.831Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-07T12:21:46.831Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 12,
               "Title": "AccountController.cs",
               "DocumentMoniker": "C:\\Users\\Elkhan Mammadli\\Desktop\\AllupMVC\\AllupWebApplication\\Controllers\\AccountController.cs",
               "RelativeDocumentMoniker": "AllupWebApplication\\Controllers\\AccountController.cs",
@@ -161,8 +274,7 @@
               "RelativeToolTip": "AllupWebApplication\\Controllers\\AccountController.cs",
               "ViewState": "AQIAABoAAAAAAAAAAAA9wBoAAAAaAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-07T10:28:06.949Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-07T10:28:06.949Z"
             }
           ]
         }

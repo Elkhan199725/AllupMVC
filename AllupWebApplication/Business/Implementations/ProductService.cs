@@ -121,7 +121,7 @@ public class ProductService : IProductService
         existingProduct.ProductCode = product.ProductCode;
         existingProduct.StockCount = product.StockCount;
         existingProduct.IsActive = product.IsActive;
-        existingProduct.Category = product.Category;
+        existingProduct.CategoryId = product.CategoryId;
         existingProduct.IsBestSeller = product.IsBestSeller;
         existingProduct.IsNew = product.IsNew;
         existingProduct.IsFeatured = product.IsFeatured;

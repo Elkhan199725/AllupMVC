@@ -9,7 +9,6 @@
   <ItemGroup>
     <Folder Include="Helpers\Exceptions\" />
     <Folder Include="ViewServices\" />
-    <Folder Include="ViewComponents\" />
     <Folder Include="Views\Shared\Components\Slider\" />
   </ItemGroup>
 

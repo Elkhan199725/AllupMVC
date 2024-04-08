@@ -8261,6 +8261,14 @@
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
     },
     {
+      "Id": "C:\\Users\\Elkhan Mammadli\\Desktop\\AllupMVC\\AllupWebApplication\\wwwroot\\uploads\\categories\\098890ff-f33a-470e-8806-f229bbe9f80c_career-in-technology-feature.jpg",
+      "PackagePath": "staticwebassets\\uploads\\categories\\098890ff-f33a-470e-8806-f229bbe9f80c_career-in-technology-feature.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Elkhan Mammadli\\Desktop\\AllupMVC\\AllupWebApplication\\wwwroot\\uploads\\categories\\282decde-0b49-45fc-996b-e10f101a4216_X-Files-1.jpg",
+      "PackagePath": "staticwebassets\\uploads\\categories\\282decde-0b49-45fc-996b-e10f101a4216_X-Files-1.jpg"
+    },
+    {
       "Id": "C:\\Users\\Elkhan Mammadli\\Desktop\\AllupMVC\\AllupWebApplication\\wwwroot\\uploads\\categories\\4cda2310-c9c2-4bd0-a9a0-62100eafbb2f_tech.jpeg",
       "PackagePath": "staticwebassets\\uploads\\categories\\4cda2310-c9c2-4bd0-a9a0-62100eafbb2f_tech.jpeg"
     },
@@ -8269,12 +8277,24 @@
       "PackagePath": "staticwebassets\\uploads\\categories\\62589e25-3283-407a-ad22-3c327ea56daa_Horror.jpg"
     },
     {
+      "Id": "C:\\Users\\Elkhan Mammadli\\Desktop\\AllupMVC\\AllupWebApplication\\wwwroot\\uploads\\categories\\6926e213-9a2c-4d50-b229-c6b0001dd4ea_wednesday-s1-e2-00-39-17-17rc-64cbc96934c9e.jpg",
+      "PackagePath": "staticwebassets\\uploads\\categories\\6926e213-9a2c-4d50-b229-c6b0001dd4ea_wednesday-s1-e2-00-39-17-17rc-64cbc96934c9e.jpg"
+    },
+    {
       "Id": "C:\\Users\\Elkhan Mammadli\\Desktop\\AllupMVC\\AllupWebApplication\\wwwroot\\uploads\\categories\\af3ce096-9086-4328-b4e6-2dfca4d1e98c_tech.jpeg",
       "PackagePath": "staticwebassets\\uploads\\categories\\af3ce096-9086-4328-b4e6-2dfca4d1e98c_tech.jpeg"
     },
     {
       "Id": "C:\\Users\\Elkhan Mammadli\\Desktop\\AllupMVC\\AllupWebApplication\\wwwroot\\uploads\\categories\\d2e7d884-337a-4b22-8487-d055a6363831_tech.jpeg",
       "PackagePath": "staticwebassets\\uploads\\categories\\d2e7d884-337a-4b22-8487-d055a6363831_tech.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\Elkhan Mammadli\\Desktop\\AllupMVC\\AllupWebApplication\\wwwroot\\uploads\\categories\\e2d86e5e-8c61-472c-9a20-41f134b96dc0_U6NH3kQNCBP3eXcjyyMHHi.jpg",
+      "PackagePath": "staticwebassets\\uploads\\categories\\e2d86e5e-8c61-472c-9a20-41f134b96dc0_U6NH3kQNCBP3eXcjyyMHHi.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Elkhan Mammadli\\Desktop\\AllupMVC\\AllupWebApplication\\wwwroot\\uploads\\categories\\ff1d9600-8d51-49d2-bc02-ea13d93db308_steam-mm.png",
+      "PackagePath": "staticwebassets\\uploads\\categories\\ff1d9600-8d51-49d2-bc02-ea13d93db308_steam-mm.png"
     },
     {
       "Id": "C:\\Users\\Elkhan Mammadli\\Desktop\\AllupMVC\\AllupWebApplication\\wwwroot\\uploads\\products\\00837492-ed0a-4d6f-beb0-f69d457595c3_stigmata-front.jpeg",
@@ -8337,6 +8357,10 @@
       "PackagePath": "staticwebassets\\uploads\\products\\2740102b-66bb-4101-a388-17eb64d52746_71ezgzuaWhL._AC_UF894,1000_QL80_.jpg"
     },
     {
+      "Id": "C:\\Users\\Elkhan Mammadli\\Desktop\\AllupMVC\\AllupWebApplication\\wwwroot\\uploads\\products\\2d5fc054-494c-4512-85d1-3671c976c78a_U6NH3kQNCBP3eXcjyyMHHi.jpg",
+      "PackagePath": "staticwebassets\\uploads\\products\\2d5fc054-494c-4512-85d1-3671c976c78a_U6NH3kQNCBP3eXcjyyMHHi.jpg"
+    },
+    {
       "Id": "C:\\Users\\Elkhan Mammadli\\Desktop\\AllupMVC\\AllupWebApplication\\wwwroot\\uploads\\products\\2e25d972-a5e4-4585-902a-737a393674d4_MV5BMTQwMDA1NzI4OV5BMl5BanBnXkFtZTcwNzM4MjM3NA@@._V1_.jpg",
       "PackagePath": "staticwebassets\\uploads\\products\\2e25d972-a5e4-4585-902a-737a393674d4_MV5BMTQwMDA1NzI4OV5BMl5BanBnXkFtZTcwNzM4MjM3NA@@._V1_.jpg"
     },
@@ -8347,10 +8371,6 @@
     {
       "Id": "C:\\Users\\Elkhan Mammadli\\Desktop\\AllupMVC\\AllupWebApplication\\wwwroot\\uploads\\products\\2e95e88c-4864-4457-b3ab-7b7336bcedb2_stigmata-front.jpeg",
       "PackagePath": "staticwebassets\\uploads\\products\\2e95e88c-4864-4457-b3ab-7b7336bcedb2_stigmata-front.jpeg"
-    },
-    {
-      "Id": "C:\\Users\\Elkhan Mammadli\\Desktop\\AllupMVC\\AllupWebApplication\\wwwroot\\uploads\\products\\315b96fc-70c2-4de1-a7ac-e3a2baeeab03_71ezgzuaWhL._AC_UF894,1000_QL80_ (1).jpg",
-      "PackagePath": "staticwebassets\\uploads\\products\\315b96fc-70c2-4de1-a7ac-e3a2baeeab03_71ezgzuaWhL._AC_UF894,1000_QL80_ (1).jpg"
     },
     {
       "Id": "C:\\Users\\Elkhan Mammadli\\Desktop\\AllupMVC\\AllupWebApplication\\wwwroot\\uploads\\products\\32be1165-56a9-4965-bcf2-c13436877df8_MV5BMTQwMDA1NzI4OV5BMl5BanBnXkFtZTcwNzM4MjM3NA@@._V1_.jpg",
@@ -8453,6 +8473,10 @@
       "PackagePath": "staticwebassets\\uploads\\products\\763d81f9-ca05-41f1-9103-9a52ea3166f4_tech.jpeg"
     },
     {
+      "Id": "C:\\Users\\Elkhan Mammadli\\Desktop\\AllupMVC\\AllupWebApplication\\wwwroot\\uploads\\products\\7ad90cf5-a809-4046-826c-a65caca3c1ab_U6NH3kQNCBP3eXcjyyMHHi.jpg",
+      "PackagePath": "staticwebassets\\uploads\\products\\7ad90cf5-a809-4046-826c-a65caca3c1ab_U6NH3kQNCBP3eXcjyyMHHi.jpg"
+    },
+    {
       "Id": "C:\\Users\\Elkhan Mammadli\\Desktop\\AllupMVC\\AllupWebApplication\\wwwroot\\uploads\\products\\7cb108ac-a8ba-4325-8a9f-9f078460b098_71ezgzuaWhL._AC_UF894,1000_QL80_.jpg",
       "PackagePath": "staticwebassets\\uploads\\products\\7cb108ac-a8ba-4325-8a9f-9f078460b098_71ezgzuaWhL._AC_UF894,1000_QL80_.jpg"
     },
@@ -8513,6 +8537,10 @@
       "PackagePath": "staticwebassets\\uploads\\products\\a886ae5b-d2f7-409c-beea-ef4fbe629750_445fb1cb89ef17590e82de87838b5ba0e584c6e498c60d2a6d3fe7c98cc3.jpg"
     },
     {
+      "Id": "C:\\Users\\Elkhan Mammadli\\Desktop\\AllupMVC\\AllupWebApplication\\wwwroot\\uploads\\products\\aa229b15-2d34-4bdf-8217-732d54d230ec_20201028111930.png",
+      "PackagePath": "staticwebassets\\uploads\\products\\aa229b15-2d34-4bdf-8217-732d54d230ec_20201028111930.png"
+    },
+    {
       "Id": "C:\\Users\\Elkhan Mammadli\\Desktop\\AllupMVC\\AllupWebApplication\\wwwroot\\uploads\\products\\abecd1a5-ebb5-4ab5-8802-4e8b418b1d8f_1660s.jpeg",
       "PackagePath": "staticwebassets\\uploads\\products\\abecd1a5-ebb5-4ab5-8802-4e8b418b1d8f_1660s.jpeg"
     },
@@ -8561,6 +8589,10 @@
       "PackagePath": "staticwebassets\\uploads\\products\\e71b0312-b159-45af-aa42-ab177c38b81a_9c5fb0df9680dd71e29a672e3f054262.jpeg"
     },
     {
+      "Id": "C:\\Users\\Elkhan Mammadli\\Desktop\\AllupMVC\\AllupWebApplication\\wwwroot\\uploads\\products\\e7c4636d-84b1-4c91-a95e-f9aaccf5e7a1_71ezgzuaWhL._AC_UF894,1000_QL80_.jpg",
+      "PackagePath": "staticwebassets\\uploads\\products\\e7c4636d-84b1-4c91-a95e-f9aaccf5e7a1_71ezgzuaWhL._AC_UF894,1000_QL80_.jpg"
+    },
+    {
       "Id": "C:\\Users\\Elkhan Mammadli\\Desktop\\AllupMVC\\AllupWebApplication\\wwwroot\\uploads\\products\\ec139183-dc3c-41f6-8bf0-d8a066314cad_tech.jpeg",
       "PackagePath": "staticwebassets\\uploads\\products\\ec139183-dc3c-41f6-8bf0-d8a066314cad_tech.jpeg"
     },
@@ -8599,6 +8631,14 @@
     {
       "Id": "C:\\Users\\Elkhan Mammadli\\Desktop\\AllupMVC\\AllupWebApplication\\wwwroot\\uploads\\sliders\\8ac2e656-0221-449f-9367-71fb050dcba6_71ezgzuaWhL._AC_UF894,1000_QL80_.jpg",
       "PackagePath": "staticwebassets\\uploads\\sliders\\8ac2e656-0221-449f-9367-71fb050dcba6_71ezgzuaWhL._AC_UF894,1000_QL80_.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Elkhan Mammadli\\Desktop\\AllupMVC\\AllupWebApplication\\wwwroot\\uploads\\sliders\\9a5a0b71-9e68-4249-984b-cd9c6f3b84fd_image001.webp",
+      "PackagePath": "staticwebassets\\uploads\\sliders\\9a5a0b71-9e68-4249-984b-cd9c6f3b84fd_image001.webp"
+    },
+    {
+      "Id": "C:\\Users\\Elkhan Mammadli\\Desktop\\AllupMVC\\AllupWebApplication\\wwwroot\\uploads\\sliders\\b3efeb22-27c4-4329-8392-6429f9b5a555_GuestPoster.jpg",
+      "PackagePath": "staticwebassets\\uploads\\sliders\\b3efeb22-27c4-4329-8392-6429f9b5a555_GuestPoster.jpg"
     },
     {
       "Id": "C:\\Users\\Elkhan Mammadli\\Desktop\\AllupMVC\\AllupWebApplication\\wwwroot\\uploads\\sliders\\b831a2be-ee6a-4c61-817d-383b29793d74_9c5fb0df9680dd71e29a672e3f054262.jpeg",
